@@ -1,0 +1,7 @@
+,term,df,sumsq,meansq,statistic,p.value,taxa,stats
+1,depth,5,774826.0,154965.2,13.2,8.56E-09,protists,obs
+2,Residuals,63,740199.2,11749.2,NA,NA,protists,obs
+3,depth,5,15.6,3.1,65.5,1.23E-23,protists,shannon
+4,Residuals,63,3.0,0.0,NA,NA,protists,shannon
+5,depth,5,0.4,0.1,111.8,5.72E-30,protists,evenness
+6,Residuals,63,0.0,0.0,NA,NA,protists,evenness
