@@ -7,7 +7,7 @@ last updated: null
 ---
 
 ## Background
-This document outlines the stephyseq taken to decontaminate 12S metabarcoding results from samples collected via CTD from the AR43 Cruise (Armstrong, March 2020) using the decontam package in R. The resulting project is a decontaminated phyloseq objective for protists only.
+This document outlines the steps taken to decontaminate 12S metabarcoding results from samples collected via CTD from the AR43 Cruise (Armstrong, March 2020) using the decontam package in R. The resulting project is a decontaminated phyloseq objective for vertebrates (mostly fish) only.
 
 ```{r install-pkgs, include=FALSE}
 
