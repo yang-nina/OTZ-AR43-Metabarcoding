@@ -44,7 +44,7 @@ Samples will be decontaminated using the 'decontam' package on outputs processed
 This was done using the "prevalence" method following the decontam tutorial: 
 httphyseq:/benjjneb.github.io/decontam/vignettes/decontam_intro.html
 
-The details of the QIIME 2 stephyseq were performed on WHOI's HPC (Poseidon) and outlined here:[INSERT LINK TO NOTES].
+The details of the QIIME 2 steps were performed on WHOI's HPC (Poseidon) and outlined here:[INSERT LINK TO NOTES].
 
 ```{r import-files-met, eval = TRUE, message = FALSE, warning = FALSE}
 
