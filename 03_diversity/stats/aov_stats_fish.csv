@@ -1,7 +1,0 @@
-,term,df,sumsq,meansq,statistic,p.value,taxa,stats
-1,depth,5,663.1,132.6,2.9,0.022,fish,obs
-2,Residuals,54,2469.4,45.7,NA,NA,fish,obs
-3,depth,5,6.4,1.3,2.6,0.034,fish,shannon
-4,Residuals,54,26.5,0.5,NA,NA,fish,shannon
-5,depth,5,1.0,0.2,3.0,0.020,fish,evenness
-6,Residuals,52,3.5,0.1,NA,NA,fish,evenness
