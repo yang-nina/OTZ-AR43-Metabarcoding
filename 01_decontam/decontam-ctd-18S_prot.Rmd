@@ -1,0 +1,292 @@
+---
+title: "decontam-ctd-18S-protist"
+author: "Nina Yang, Postdoctoral Investigator, WHOI"
+created date: "2023-05-26"
+output: "2024-12-05"
+last updated: null
+---
+
+## Background
+This document outlines the steps taken to decontaminate 18S V9 metabarcoding results from samples collected via CTD from the AR43 Cruise (Armstrong, March 2020) using the decontam package in R. The resulting project is a decontaminated phyloseq objective for protists only.
+
+```{r install-pkgs, include=FALSE}
+
+if (!requireNamespace("devtools", quietly = TRUE))
+  {install.packages("devtools")};
+if(!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager");
+devtools::install_github("r-lib/conflicted");
+BiocManager::install("tidyverse", force = TRUE); 
+devtools::install_github("jbisanz/qiime2R", force = TRUE);
+BiocManager::install("patchwork", force = TRUE); 
+BiocManager::install("phyloseq", force = TRUE);
+BiocManager::install("DT", force = TRUE); 
+BiocManager::install("decontam", force = TRUE); 
+
+```
+
+```{r load-pkgs, include=FALSE}
+
+library("conflicted"); packageVersion("conflicted")
+library("tidyverse"); packageVersion("tidyverse")
+library("qiime2R"); packageVersion("qiime2R")
+library("patchwork"); packageVersion("patchwork")
+library("phyloseq"); packageVersion("phyloseq")
+library("DT"); packageVersion("DT")
+library("decontam"); packageVersion("decontam")
+
+```
+
+## Identify Contaminants 
+
+Samples will be decontaminated using the 'decontam' package on outputs processed in QIIME 2 
+
+This was done using the "prevalence" method following the decontam tutorial: 
+httphyseq://benjjneb.github.io/decontam/vignettes/decontam_intro.html
+
+The details of the QIIME 2 stephyseq were performed on WHOI's HPC (Poseidon) and outlined here:[INSERT LINK TO NOTES].
+
+```{r import-files-prot, eval = TRUE, message = FALSE, warning = FALSE}
+
+# input QIIME 2 outputs
+
+## sequence table
+ASVs <- read_qza("../00_qiime2-outputs/18S/prdb-protist-ctd-table.qza")
+names(ASVs)
+ASVs$data[1:5,1:5]  #show first 5 samples and first 5 taxa
+
+## updated metadata
+metadata <- read.table("../00_qiime2-outputs/18S/metadata_AR43_update_ctd.txt", sep='\t', header=T, row.names=1, comment = "")
+
+head(metadata)
+tail(metadata)
+metadata <- metadata %>% select(-c(duration))
+head(metadata)
+tail(metadata)
+colnames(metadata)
+
+## taxonomy
+taxonomy <- read_qza("../00_qiime2-outputs/18S/ar43-18s-prdb-taxonomy-naivebayes.qza")
+head(taxonomy$data)
+strsplit_output <- (strsplit(as.character(taxonomy$data$Taxon), ";"))
+max_length <- max(lengths(strsplit_output))
+
+list_of_vectors <- lapply(strsplit_output, function(x){
+  c(x, rep(NA, max_length - length(x)))
+  })
+
+head(list_of_vectors)
+
+tax_table <- do.call(rbind, list_of_vectors)
+colnames(tax_table) <- c("Domain", "Supergroup", "Division", "Subdivision", "Class", "Order", "Family", "Genus", "Species")
+head(tax_table)
+rownames(tax_table) <- taxonomy$data$Feature.ID
+head(tax_table)
+
+# create a phyloseq object
+physeq <- phyloseq(
+  otu_table(ASVs$data, taxa_are_rows = T),
+  tax_table(tax_table),
+  sample_data(metadata)
+)
+
+physeq # check that this is a phyloseq object
+rank_names(physeq, errorIfNULL = TRUE)
+class(physeq)
+
+datatable(sample_data(physeq))
+head(sample_data(physeq))
+
+```
+
+```{r identify-prot, eval = TRUE, message = FALSE, warning = FALSE}
+
+# check library size (number of reads) in each sample, as a function of whether that sample was a true positive sample or a negative control
+
+# The library sizes of the positive samples primarily fall from 50,000 to 150,000 reads, but there are some low-read outliers around < 25,000. The negative control samples have the lowest reads as expected. Note: It is important keep the low-read samples for now, because we want to use those negative controls to help identify contaminants!
+
+df <- as.data.frame(sample_data(physeq))
+df$LibrarySize <- sample_sums(physeq)
+df <- df[order(df$LibrarySize),]
+df$Index <- seq(nrow(df))
+ggplot(df, aes(x=Index, y=LibrarySize, color=Type)) + 
+  geom_point() + 
+  scale_y_continuous(breaks=c(2000, 25000, 50000, 75000, 100000, 
+                              120000, 150000, 175000, 200000,
+                              225000, 250000))
+
+ggsave("18S/librarysize_samples_prot.pdf", height = 4, width = 5, units = "in", dpi=300)
+
+
+# Identify Contaminants - Prevalence
+# Prevalence (presence/absence across samples) of each sequence feature in true positive samples is compared to the prevalence in negative controls to identify contaminants.
+
+# In our phyloseq object, "Type" is the sample variable that holds the negative control information. 
+# We’ll summarize that data as a logical variable, with TRUE for control samples, as that is the form required by isContaminant.
+
+sample_data(physeq)$is.neg <- sample_data(physeq)$Type == "control"
+contamdf.prev <- isContaminant(physeq, method="prevalence", neg="is.neg")
+table(contamdf.prev$contaminant)
+
+# This shows there are 16 potential contaminants out of 9781 sequences.
+list <- (which(contamdf.prev$contaminant)) # identify which lines represent contaminants
+list
+
+# the default threshold for a contaminant is 0.1. At 0.5, this indicates that contaminants are sequences that are more prevalent in negative controls than in positive samples. This is a more aggressive approach.
+contamdf.prev05 <- isContaminant(physeq, method="prevalence", neg="is.neg", threshold=0.5)
+table(contamdf.prev05$contaminant) 
+
+list05 <- (which(contamdf.prev05$contaminant)) # identify which lines represent contaminants
+list05
+
+# identified 44 potential contaminants. 
+
+# Let’s take a look at the number of times several of these taxa were observed in negative controls and positive samples.
+
+# 0.5 threshold
+physeq.nc <- prune_taxa(!contamdf.prev05$contaminant, physeq)
+physeq.c <- prune_taxa(contamdf.prev05$contaminant, physeq)
+physeq.control <- merge_phyloseq(physeq.nc, physeq.c)
+physeq.control
+
+contamdf.prev05.visual <- isContaminant(physeq.control, method="prevalence", neg="is.neg", threshold=0.5)
+table(contamdf.prev05.visual$contaminant) 
+
+list <- (which(contamdf.prev05.visual$contaminant)) # identify which lines represent contaminants
+list
+
+physeq.pa <- transform_sample_counts(physeq.control, function(abund) 1*(abund>0))
+physeq.pa.neg <- prune_samples(sample_data(physeq.pa)$Type == "control", physeq.pa)
+physeq.pa.pos <- prune_samples(sample_data(physeq.pa)$Type == "sample", physeq.pa)
+
+# Make data.frame of prevalence in positive and negative samples
+df.pa <- data.frame(pa.pos=taxa_sums(physeq.pa.pos), pa.neg=taxa_sums(physeq.pa.neg),
+                    contaminant=contamdf.prev05.visual$contaminant)
+
+ggplot(data=df.pa, aes(x=pa.neg, y=pa.pos, color=contaminant)) + geom_point() +
+  xlab("Prevalence (Negative Controls)") + ylab("Prevalence (True Samples)")
+
+all
+
+ggsave("18S/contam_prevalence_05threshold_prot.pdf", height = 3, width = 4, units = "in", dpi=300)
+
+```
+
+```{r extract-prot, eval = TRUE, message = FALSE, warning = FALSE}
+
+# now let's take a look at these contaminants and identify what they are for threshold set to 0.5
+list <- (which(contamdf.prev05$contaminant))
+list # this is an index of the dataframe
+
+summary(contamdf.prev05)
+class(contamdf.prev05)
+head(contamdf.prev05)
+
+# this takes the index and extracts the relevant entries that are contaminants so we can blast it.
+df <- contamdf.prev05[list, ]
+head(df)
+summary(df)
+write.csv(df, "18S/contaminants-seqs-ctd-prev05_prot.csv", row.names = TRUE)
+
+lines <- readLines("../00_qiime2-outputs/18S/prdb-protist-ctd-rep-seqs.fasta")
+head(lines)
+
+headers <- rownames(df) # this pulls all the sequence names
+headers
+headers <- paste0(">", headers) # create headers that match the fasta file
+headers
+
+# create a new fasta file with just the decontaminants
+extracted_sequences <- character()
+
+# Loop over the lines in the fasta file
+for (i in 1:(length(lines) - 1)) {
+  # Check if the current line is a header line
+  if (substr(lines[i], 1, 1) == ">") {
+    # Check if the current header is in the list of headers to extract
+    if (lines[i] %in% headers) {
+      # Extract the corresponding sequence
+      extracted_sequences <- c(extracted_sequences, lines[i], lines[i + 1])
+    }
+  }
+}
+
+head(extracted_sequences)
+writeLines(extracted_sequences, "18S/decontam-extracted-seqs-ctd-contaminants-prev05_prot.fasta")
+
+```
+
+## Evaluating contaminants
+
+After extracting the contaminants, it is helpful to identify what they are. I used the taxonomy file from QIIME 2 to do this. 
+
+Note: in the past, if an identified "contaminant" was ecologically relevant, I considered not removing it from the samples. However, for ease of use and to have a relatively stringent decontamination process for this dataset, I decided to use the 0.5 threshold and remove all identified contaminants from the samples. It is still good to know what has been identified as a contaminant.
+
+```{r check-prev05-prot, eval = TRUE, message = FALSE, warning = FALSE}
+# check feature frequency for identified contaminants
+
+# this file was downloaded from the prdb-protist-ctd-table.qzv visualization
+freq <- read.csv("18S/prdb_prot_feature-frequency-detail.csv")
+head(freq)
+# rename columns
+colnames(freq);
+names(freq)[1] <- "feature"
+names(freq)[2] <- "frequency"
+
+head(freq)
+
+# read in the contamination file that was generated earlier
+prev05 <- read.csv("18S/contaminants-seqs-ctd-prev05_prot.csv")
+
+# I can create a joint table that combines the two files to show feature frequency
+
+## first, I have to rename "X" to be feature (to match the feature freauency file)
+names(prev05)[1] <- "feature"
+head(prev05)
+dim(prev05)
+prev05_df <- left_join(prev05, freq, by="feature")
+head(prev05_df)
+summary(prev05_df)
+dim(prev05_df)
+
+## I used the taxonomy from the ar43-18s-prdb-taxonomy-naivebayes.qzv file to do this. I can also import the blast results and combine them, if needed.
+blast <- read.table("../00_qiime2-outputs/18S/ar43-18s-prdb-taxonomy-naivebayes.tsv", sep='\t', header=T, row.names=1, comment = "")
+head(blast)
+colnames(blast)
+head(blast)
+dim(blast)
+class(blast)
+rownames(blast)
+colnames(blast)
+blast$feature <- rownames(blast)
+head(blast)
+colnames(blast)
+blast_df <- as.data.frame(blast[c(2:12715), c(1:3)])
+summary(blast_df)
+head(blast_df)
+join_df <- left_join(prev05_df, blast_df, by = "feature" )
+head(join_df)
+join_df$Taxon
+dim(join_df)
+
+write.csv(join_df, "18S/prot_blast-contaminants-seqs-prev05_18s_naivebayes.csv", row.names = TRUE)
+
+```
+
+```{r decontam-prot, eval = TRUE, message = FALSE, warning = FALSE}
+# Now that we have identified likely contaminants, let’s remove them from the phyloseq object based on 0.5 threshold
+
+#let's check the 0.5 threshold:
+head(contamdf.prev05)
+tail(contamdf.prev05)
+dim(contamdf.prev05)
+rownames(contamdf.prev05)
+
+physeq
+physeq.noncontam <- prune_taxa(!contamdf.prev05$contaminant, physeq)
+physeq.noncontam
+
+saveRDS(physeq.noncontam, file = "../02_phyloseq/18S/decontam-protist-ctd-phyloseq_05.rds") # save the file
+
+```
+
