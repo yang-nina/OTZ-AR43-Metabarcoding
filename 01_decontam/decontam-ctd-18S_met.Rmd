@@ -170,7 +170,7 @@ df.pa <- data.frame(pa.pos=taxa_sums(physeq.pa.pos), pa.neg=taxa_sums(physeq.pa.
 ggplot(data=df.pa, aes(x=pa.neg, y=pa.pos, color=contaminant)) + geom_point() +
   xlab("Prevalence (Negative Controls)") + ylab("Prevalence (True Samples)")
 
-ggsave("18S/contam_prevalence_tresholds_met.pdf", height = 3, width = 4, units = "in", dpi=300)
+ggsave("18S/contam_prevalence_thresholds_met.pdf", height = 3, width = 4, units = "in", dpi=300)
 
 ```
 
