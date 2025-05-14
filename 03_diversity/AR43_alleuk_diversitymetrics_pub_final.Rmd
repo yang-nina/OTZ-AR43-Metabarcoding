@@ -4199,7 +4199,7 @@ panel <- prot_pca_plot + met_pca_plot + fish_pca_plot +
 
 panel
 
-ggsave("./plots-final/beta_diversity_pca_all.pdf", height = 62, width = 180, units = "mm", dpi=300)
+ggsave("./plots-final/beta_diversity_pca_all_pub.pdf", height = 62, width = 180, units = "mm", dpi=300)
 
 panel <- prot_pca_plot + met_pca_plot + fish_pca_plot_revised + 
 #  plot_annotation(tag_levels = "A", tag_suffix = '.') + 
@@ -4217,7 +4217,7 @@ panel <- prot_pca_plot + met_pca_plot + fish_pca_plot_revised +
 
 panel
 
-ggsave("./plots-final/beta_diversity_pca_all_revised.pdf", height = 62, width = 180, units = "mm", dpi=300)
+ggsave("./plots-final/beta_diversity_pca_all_revised_pub.pdf", height = 62, width = 180, units = "mm", dpi=300)
 
 
 ```
