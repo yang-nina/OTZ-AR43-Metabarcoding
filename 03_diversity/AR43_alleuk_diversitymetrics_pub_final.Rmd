@@ -892,8 +892,6 @@ load(file = "rare_melt_dataframes.RData", verbose = TRUE)
 
 ## 2.2 Calculate Alpha Diversity
 
-### 2.2.1 Calculate alpha diversity indices
-
 ```{r alpha-div-fxn, eval = TRUE, message = FALSE, warning = FALSE}
 
 # this gets rid of all the warnings when using summarise by dplyr
@@ -1846,45 +1844,45 @@ prot_asv_plot <- prot_asv %>%
 
 prot_asv_plot
 
-ggsave("./plots-final/prot_obs_taxa_barplot.pdf", height = 5, width = 5, units = "in", dpi=300)
+#ggsave("./plots-final/prot_obs_taxa_barplot.pdf", height = 5, width = 5, units = "in", dpi=300)
 
 prot_relabun_asv_plot <- make_taxabar_asv_relabun_collapse(prot_asv)
 prot_relabun_asv_plot + 
   guides(fill = guide_legend(title = "Protists"))
 
-ggsave("./plots-final/prot_obs_taxa_relabun.pdf", height = 5, width = 5, units = "in", dpi=300)
+#ggsave("./plots-final/prot_obs_taxa_relabun.pdf", height = 5, width = 5, units = "in", dpi=300)
 
 head(prot_asv)
 
 # let's identify the taxa that make up the largest fraction of ASV diversity. This is termed "top taxa" in the code. 
 # This pipeline effectively identifies and ranks the top 5 taxa by relative abundance within each depth.
-
-top_prot <- prot_asv %>% group_by(depth) %>% # group by depth
-  mutate(sum_obs = sum(sobs)) %>% # get the total number of ASVs for each depth in a new column called "sum_obs"
-  mutate(RelativeAbundance = (sobs / sum_obs) * 100, na.rm = TRUE) %>% # calculate the relative abundance of ASVs out of the total # of ASVs at each depth and create a new column. 
-  mutate(depth = as.factor(depth)) %>% # change depth to a factor 
-  ungroup() %>% # ungroup 
-  group_by(depth, TAXA) %>% # regroup by depth and TAXA
-  summarise(sum_RelativeAbundance = sum(RelativeAbundance, na.rm = TRUE), .groups = "drop") %>% # summarize to get the sum of the relative abundance of each taxa at each depth
-  mutate(TAXA = fct_reorder(TAXA, sum_RelativeAbundance, .desc = FALSE)) %>% # Reorders the levels of the TAXA factor based on the sum_RelativeAbundance, maintaining the order of appearance if ties occur.
-  ungroup() %>% # ungroup 
-  group_by(depth) %>% # regroup by depth only 
-  slice_max(order_by = sum_RelativeAbundance, n = 5, with_ties = FALSE) %>% # Selects the top 5 rows in each depth group based on sum_RelativeAbundance, excluding ties beyond the top 5.
-  ungroup() # ungroup
-
-top_prot %>% group_by(depth) %>% mutate(sum = sum(sum_RelativeAbundance)) %>% select(-TAXA, -sum_RelativeAbundance) %>% unique()
-
-top_prot_pub <- top_prot %>% ggplot(aes(y = fct_rev(depth), x = sum_RelativeAbundance)) +
-    geom_col(aes(fill = TAXA), color = "black", width = 0.78, linewidth = 0.25) +
-    labs(title = NULL,
-         y = "Depth (m)",
-         x = "Relative Proportion (%)") +
-  scale_x_continuous(limits = c(0, 100)) + 
-    scale_fill_manual(values = taxa_colors,
-                      limits = taxa_sorted) +
-    theme_custom_paper()# Use a manually sorted order for the legend
-
-top_prot_pub
+# 
+# top_prot <- prot_asv %>% group_by(depth) %>% # group by depth
+#   mutate(sum_obs = sum(sobs)) %>% # get the total number of ASVs for each depth in a new column called "sum_obs"
+#   mutate(RelativeAbundance = (sobs / sum_obs) * 100, na.rm = TRUE) %>% # calculate the relative abundance of ASVs out of the total # of ASVs at each depth and create a new column. 
+#   mutate(depth = as.factor(depth)) %>% # change depth to a factor 
+#   ungroup() %>% # ungroup 
+#   group_by(depth, TAXA) %>% # regroup by depth and TAXA
+#   summarise(sum_RelativeAbundance = sum(RelativeAbundance, na.rm = TRUE), .groups = "drop") %>% # summarize to get the sum of the relative abundance of each taxa at each depth
+#   mutate(TAXA = fct_reorder(TAXA, sum_RelativeAbundance, .desc = FALSE)) %>% # Reorders the levels of the TAXA factor based on the sum_RelativeAbundance, maintaining the order of appearance if ties occur.
+#   ungroup() %>% # ungroup 
+#   group_by(depth) %>% # regroup by depth only 
+#   slice_max(order_by = sum_RelativeAbundance, n = 5, with_ties = FALSE) %>% # Selects the top 5 rows in each depth group based on sum_RelativeAbundance, excluding ties beyond the top 5.
+#   ungroup() # ungroup
+# 
+# top_prot %>% group_by(depth) %>% mutate(sum = sum(sum_RelativeAbundance)) %>% select(-TAXA, -sum_RelativeAbundance) %>% unique()
+# 
+# top_prot_pub <- top_prot %>% ggplot(aes(y = fct_rev(depth), x = sum_RelativeAbundance)) +
+#     geom_col(aes(fill = TAXA), color = "black", width = 0.78, linewidth = 0.25) +
+#     labs(title = NULL,
+#          y = "Depth (m)",
+#          x = "Relative Proportion (%)") +
+#   scale_x_continuous(limits = c(0, 100)) + 
+#     scale_fill_manual(values = taxa_colors,
+#                       limits = taxa_sorted) +
+#     theme_custom_paper()# Use a manually sorted order for the legend
+# 
+# top_prot_pub
 
 ```
 
@@ -2125,6 +2123,7 @@ met_unknown_rename <- function(df){
 ```
 
 ```{r met-asv-taxa-scan2, eval = TRUE, message = FALSE, warning = FALSE}
+
 met_relabun_rename <- met_unknown_rename(met_relabun)
 unique(met_relabun_rename$Order) %>% sort()
 
@@ -2225,42 +2224,42 @@ met_asv_plot <- met_asv %>%
 
 met_asv_plot
 
-ggsave("./plots-final/met_obs_taxa_barplot.pdf", height = 5, width = 5, units = "in", dpi=300)
+#ggsave("./plots-final/met_obs_taxa_barplot.pdf", height = 5, width = 5, units = "in", dpi=300)
 
 met_relabun_asv_plot <- make_taxabar_asv_relabun_collapse(met_asv)
 met_relabun_asv_plot
 
-ggsave("./plots-final/met_obs_taxa_relabun_panel.pdf", height = 5, width = 5, units = "in", dpi=300)
-
-head(met_asv)
-top_met <- met_asv %>% group_by(depth) %>%
-  mutate(sum_obs = sum(sobs)) %>%
-  mutate(RelativeAbundance = (sobs / sum_obs) * 100, na.rm = TRUE) %>%
-  mutate(depth = as.factor(depth)) %>%
-  ungroup() %>%
-  group_by(depth, TAXA) %>%
-  summarise(sum_RelativeAbundance = sum(RelativeAbundance, na.rm = TRUE), .groups = "drop") %>%
-#  arrange(depth, desc(sum_RelativeAbundance)) %>%
-  mutate(TAXA = fct_reorder(TAXA, sum_RelativeAbundance, .desc = FALSE)) %>%
-  ungroup() %>%
-  group_by(depth) %>%
-  slice_max(order_by = sum_RelativeAbundance, n = 5, with_ties = FALSE) %>%
-  ungroup()
-
-top_met %>% group_by(depth) %>% mutate(sum = sum(sum_RelativeAbundance)) %>% select(-TAXA, -sum_RelativeAbundance) %>% unique()
-
-
-top_met_pub <- top_met %>% ggplot(aes(y = fct_rev(depth), x = sum_RelativeAbundance)) +
-    geom_col(aes(fill = TAXA), color = "black", width = 0.78, linewidth = 0.25) +
-    labs(title = NULL,
-         y = "Depth (m)",
-         x = "Relative Proportion (%)") +
-  scale_x_continuous(limits = c(0, 100)) + 
-    scale_fill_manual(values = taxa_colors,
-                      limits = taxa_sorted) +
-    theme_custom_paper()# Use a manually sorted order for the legend
-
-top_met_pub
+#ggsave("./plots-final/met_obs_taxa_relabun_panel.pdf", height = 5, width = 5, units = "in", dpi=300)
+# 
+# head(met_asv)
+# top_met <- met_asv %>% group_by(depth) %>%
+#   mutate(sum_obs = sum(sobs)) %>%
+#   mutate(RelativeAbundance = (sobs / sum_obs) * 100, na.rm = TRUE) %>%
+#   mutate(depth = as.factor(depth)) %>%
+#   ungroup() %>%
+#   group_by(depth, TAXA) %>%
+#   summarise(sum_RelativeAbundance = sum(RelativeAbundance, na.rm = TRUE), .groups = "drop") %>%
+# #  arrange(depth, desc(sum_RelativeAbundance)) %>%
+#   mutate(TAXA = fct_reorder(TAXA, sum_RelativeAbundance, .desc = FALSE)) %>%
+#   ungroup() %>%
+#   group_by(depth) %>%
+#   slice_max(order_by = sum_RelativeAbundance, n = 5, with_ties = FALSE) %>%
+#   ungroup()
+# 
+# top_met %>% group_by(depth) %>% mutate(sum = sum(sum_RelativeAbundance)) %>% select(-TAXA, -sum_RelativeAbundance) %>% unique()
+# 
+# 
+# top_met_pub <- top_met %>% ggplot(aes(y = fct_rev(depth), x = sum_RelativeAbundance)) +
+#     geom_col(aes(fill = TAXA), color = "black", width = 0.78, linewidth = 0.25) +
+#     labs(title = NULL,
+#          y = "Depth (m)",
+#          x = "Relative Proportion (%)") +
+#   scale_x_continuous(limits = c(0, 100)) + 
+#     scale_fill_manual(values = taxa_colors,
+#                       limits = taxa_sorted) +
+#     theme_custom_paper()# Use a manually sorted order for the legend
+# 
+# top_met_pub
 
 ```
 
@@ -2463,7 +2462,7 @@ fish_asv_plot <- fish_asv %>%
 
 fish_asv_plot
 
-ggsave("./plots-final/fish_obs_taxa_family_barplot.pdf", height = 5, width = 6, units = "in", dpi=300)
+#ggsave("./plots-final/fish_obs_taxa_family_barplot.pdf", height = 5, width = 6, units = "in", dpi=300)
 
 # I don't want to plot something with 26 groups especially since most groups have few ASVs. Let's combine.
 fish_taxa_abun_check <- fish_taxa_order %>% select(TAXA, Abundance) %>%
@@ -2543,7 +2542,7 @@ taxa_sorted <- c("Alepocephalidae",
 fish_relabun_asv_plot <- make_taxabar_asv_relabun_collapse(fish_asv2)
 fish_relabun_asv_plot
 
-ggsave("./plots-final/fish_obs_taxa_family_relabun.pdf", height = 5, width = 5, units = "in", dpi=300)
+#ggsave("./plots-final/fish_obs_taxa_family_relabun.pdf", height = 5, width = 5, units = "in", dpi=300)
 
 fish_asv_plot <- fish_asv2 %>% select(depth, TAXA, sobs) %>%
   unique() %>%
@@ -2560,39 +2559,39 @@ fish_asv_plot <- fish_asv2 %>% select(depth, TAXA, sobs) %>%
 
 fish_asv_plot
 
-ggsave("./plots-final/fish_obs_taxa_family_barplot_simplified.pdf", height = 5, width = 5, units = "in", dpi=300)
-
-head(fish_asv2)
-
-top_fish <- fish_asv2 %>% group_by(depth) %>%
-  mutate(sum_obs = sum(sobs)) %>%
-  mutate(RelativeAbundance = (sobs / sum_obs) * 100, na.rm = TRUE) %>%
-  mutate(depth = as.factor(depth)) %>%
-  ungroup() %>%
-  group_by(depth, TAXA) %>%
-  summarise(sum_RelativeAbundance = sum(RelativeAbundance, na.rm = TRUE), .groups = "drop") %>%
-#  arrange(depth, desc(sum_RelativeAbundance)) %>%
-  mutate(TAXA = fct_reorder(TAXA, sum_RelativeAbundance, .desc = FALSE)) %>%
-  ungroup() %>%
-  group_by(depth) %>%
-  slice_max(order_by = sum_RelativeAbundance, n = 5, with_ties = FALSE) %>%
-  ungroup()
-
-top_fish
-
-top_fish %>% group_by(depth) %>% mutate(sum = sum(sum_RelativeAbundance)) %>% select(-TAXA, -sum_RelativeAbundance) %>% unique()
-
-top_fish_pub <- top_fish %>% ggplot(aes(y = fct_rev(depth), x = sum_RelativeAbundance)) +
-    geom_col(aes(fill = TAXA), color = "black", width = 0.78, linewidth = 0.25) +
-    labs(title = NULL,
-         y = "Depth (m)",
-         x = "Relative Proportion (%)") +
-  scale_x_continuous(limits = c(0, 100)) + 
-    scale_fill_manual(values = taxa_colors,
-                      limits = taxa_sorted) +
-    theme_custom_paper()# Use a manually sorted order for the legend
-
-top_fish_pub
+#ggsave("./plots-final/fish_obs_taxa_family_barplot_simplified.pdf", height = 5, width = 5, units = "in", dpi=300)
+# 
+# head(fish_asv2)
+# 
+# top_fish <- fish_asv2 %>% group_by(depth) %>%
+#   mutate(sum_obs = sum(sobs)) %>%
+#   mutate(RelativeAbundance = (sobs / sum_obs) * 100, na.rm = TRUE) %>%
+#   mutate(depth = as.factor(depth)) %>%
+#   ungroup() %>%
+#   group_by(depth, TAXA) %>%
+#   summarise(sum_RelativeAbundance = sum(RelativeAbundance, na.rm = TRUE), .groups = "drop") %>%
+# #  arrange(depth, desc(sum_RelativeAbundance)) %>%
+#   mutate(TAXA = fct_reorder(TAXA, sum_RelativeAbundance, .desc = FALSE)) %>%
+#   ungroup() %>%
+#   group_by(depth) %>%
+#   slice_max(order_by = sum_RelativeAbundance, n = 5, with_ties = FALSE) %>%
+#   ungroup()
+# 
+# top_fish
+# 
+# top_fish %>% group_by(depth) %>% mutate(sum = sum(sum_RelativeAbundance)) %>% select(-TAXA, -sum_RelativeAbundance) %>% unique()
+# 
+# top_fish_pub <- top_fish %>% ggplot(aes(y = fct_rev(depth), x = sum_RelativeAbundance)) +
+#     geom_col(aes(fill = TAXA), color = "black", width = 0.78, linewidth = 0.25) +
+#     labs(title = NULL,
+#          y = "Depth (m)",
+#          x = "Relative Proportion (%)") +
+#   scale_x_continuous(limits = c(0, 100)) + 
+#     scale_fill_manual(values = taxa_colors,
+#                       limits = taxa_sorted) +
+#     theme_custom_paper()# Use a manually sorted order for the legend
+# 
+# top_fish_pub
 
 ```
 
@@ -2602,8 +2601,6 @@ top_fish_pub
 save(prot_asv, met_asv, fish_asv, fish_asv2, file = "./asv_tables_alltaxa_for_plotting.RData")
 
 load(file = "./asv_tables_alltaxa_for_plotting.RData", verbose = T)
-
-#save(prot_taxa, met_taxa_order2, fish_taxa_order, file = "./psmelt_tables_for networks.RData")
 
 ```
 
@@ -2653,7 +2650,7 @@ fish_relabun_asv_pub
         axis.text = element_text(size = 6),
         axis.title = element_text(size = 8))
 
-ggsave("./plots-final/alleuk_asv_relabun_barplot_pub.pdf", height = 120, width = 180, units = "mm", dpi=300)
+ggsave("./plots-final/alleuk_asv_relabun_barplot.pdf", height = 100, width = 180, units = "mm", dpi=300)
 
 ```
 
@@ -2685,10 +2682,30 @@ fish_asv_pub <- fish_asv_plot + labs(x = "Observed ASVs",
 
 fish_asv_pub
 
+(prot_asv_pub + met_asv_pub + fish_asv_pub) + plot_annotation(tag_levels = "A", tag_suffix = '.') + 
+  plot_layout(guides = 'collect') & 
+  theme(plot.margin = unit(c(t = 1, r = 1, b = 1, l = 1), "lines"),
+        plot.title = element_text(size = 8),
+        plot.tag = element_text(size = 8),
+        panel.spacing = unit(5, "mm"),
+        legend.text = element_text(size = 6, margin = margin(l = 2)),
+        legend.position = "bottom", 
+        legend.spacing.x = unit(7, "mm"), 
+        legend.margin = margin(t = -4, r = 0, b = 0, l = 0), 
+        legend.key.size = unit(2, 'mm'), 
+        legend.key.height = unit(1, "mm"),
+        legend.key.spacing.x = unit(1, "mm"),
+        legend.key.spacing.y = unit(0.25, "mm"),
+        axis.text = element_text(size = 6),
+        axis.title = element_text(size = 8))
+
+ggsave("./plots-final/alleuk_obs_asv_barplot.pdf", height = 100, width = 180, units = "mm", dpi=300)
+
 ```
 
-```{r combined-asv-plots, eval = TRUE, message = FALSE, warning = FALSE}
+```{r asv-figure-for-pub eval = TRUE, message = FALSE, warning = FALSE}
 
+# these have no legend so we can combine all the asv plots into one
 prot_asv_pub <- prot_asv_plot + labs(x = "Observed ASVs",
        y = "Depth (m)", 
        title = "Protists") + 
@@ -2715,39 +2732,6 @@ fish_asv_pub <- fish_asv_plot + labs(x = "Observed ASVs",
 
 fish_asv_pub
 
-```
-
-```{r combined-top-asv-proportion eval = TRUE, message = FALSE, warning = FALSE}
-
-top_prot_plot_pub <- top_prot_pub + labs(x = "Observed ASVs",
-       y = "Depth (m)", 
-       title = "Protists") + 
-  theme(legend.position = "bottom") +
-  guides(fill = guide_legend(title = NULL,
-                             ncol = 2))
-
-top_prot_plot_pub
-
-
-top_met_plot_pub <- top_met_pub + labs(x = "Observed ASVs",
-       y = "Depth (m)", 
-       title = "Invertebrates") + 
-  theme(legend.position = "bottom") +
-  guides(fill = guide_legend(title = NULL,
-                             ncol = 2))
-top_met_plot_pub
-
-top_fish_plot_pub <- top_fish_pub + labs(x = "Observed ASVs",
-       y = "Depth (m)", 
-       title = "Vertebrates") + 
-  theme(legend.position = "bottom") +
-  guides(fill = guide_legend(title = NULL,
-                             ncol = 2))
-top_fish_plot_pub
-
-```
-
-```{r asv-figure-for-pub eval = TRUE, message = FALSE, warning = FALSE}
 
 (prot_asv_pub + met_asv_pub + fish_asv_pub) / (prot_relabun_asv_pub + met_relabun_asv_pub + fish_relabun_asv_pub) + 
     plot_layout(guides = 'collect') + plot_annotation(tag_levels = "A", tag_suffix = '.')  & 
@@ -2767,29 +2751,7 @@ top_fish_plot_pub
         axis.text.y = element_text(size = 6),
         axis.title = element_text(size = 8))
 
-ggsave("./plots-final/alleuk_asv_relabun_barplot_pub.pdf", height = 180, width = 180, units = "mm", dpi=300)
-
-(prot_asv_pub + met_asv_pub + fish_asv_pub) / (top_prot_plot_pub + top_met_plot_pub + top_fish_plot_pub) + 
-  plot_layout(guides = 'collect') + plot_annotation(tag_levels = "A", tag_suffix = '.')  & 
-  theme(plot.margin = unit(c(t = 1, r = 1, b = 1, l = 1), "lines"),
-        plot.title = element_text(size = 8),
-        plot.tag = element_text(size = 8),
-        panel.spacing = unit(3, "mm"),
-        legend.text = element_text(size = 6, margin = margin(l = 2)),
-        legend.position = "bottom", 
-        legend.spacing.x = unit(7, "mm"), 
-        legend.margin = margin(t = -4, r = 0, b = 0, l = 0), 
-        legend.key.size = unit(2, 'mm'), 
-        legend.key.height = unit(1, "mm"),
-        legend.key.spacing.x = unit(1, "mm"),
-        legend.key.spacing.y = unit(0.25, "mm"),
-        axis.text.x = element_text(size = 6),
-        axis.text.y = element_text(size = 6),
-        axis.title = element_text(size = 8))
-
-ggsave("./plots-final/alleuk_asv_relabun_barplot_pub2.pdf", height = 180, width = 180, units = "mm", dpi=300)
-
-# publication figure was created by combining these because the legend for the top ASVs are wonky. I replaced the relative proportion with the top ASV proportion in the publication figure.
+ggsave("./plots-final/alleuk_asv_obs_relabun_barplot_pub.pdf", height = 180, width = 180, units = "mm", dpi=300)
 
 ```
 
@@ -3127,9 +3089,9 @@ prot_relabun_agg <- make_taxabar_relabun_agg(prot_taxa2) +
     
 prot_relabun_agg 
 
-ggsave("./plots-final/prot_relabun_agg_barplot.pdf", height = 5, width = 3, units = "in", dpi=300)
+#ggsave("./plots-final/prot_relabun_agg_barplot.pdf", height = 5, width = 3, units = "in", dpi=300)
 
-
+# just to see how relative abundance differs between casts
 prot_relabun_deploy <- make_taxabar_relabun_deploy(prot_taxa2) + 
   theme(legend.position = "right") +
       labs(x = "Relative Abundance (%)",
@@ -3143,7 +3105,7 @@ prot_relabun_deploy
 
 length(unique(prot_taxa2$OTU)) #7046
 
-ggsave("./plots-final/prot_relabun_deploy_barplot.pdf", height = 4, width = 9, units = "in", dpi=300)
+#ggsave("./plots-final/prot_relabun_deploy_barplot.pdf", height = 4, width = 9, units = "in", dpi=300)
 
 # Invertebrates
 
@@ -3177,7 +3139,7 @@ met_relabun_agg <- make_taxabar_relabun_agg(met_taxa_order3) +
                              override.aes = list(stroke = 1)))
 met_relabun_agg
 
-ggsave("./plots-final/met_relabun_agg_barplot.pdf", height = 5, width = 4, units = "in", dpi=300)
+#ggsave("./plots-final/met_relabun_agg_barplot.pdf", height = 5, width = 4, units = "in", dpi=300)
 
 met_relabun_deploy <- make_taxabar_relabun_deploy(met_taxa_order3) + 
   labs(x = "Relative Abundance (%)",
@@ -3189,7 +3151,7 @@ met_relabun_deploy <- make_taxabar_relabun_deploy(met_taxa_order3) +
                              override.aes = list(stroke = 1)))
 met_relabun_deploy
 
-ggsave("./plots-final/met_relabun_deploy_barplot.pdf", height = 4, width = 9, units = "in", dpi=300)
+#ggsave("./plots-final/met_relabun_deploy_barplot.pdf", height = 4, width = 9, units = "in", dpi=300)
 
 length(unique(met_taxa_order3$OTU)) # 399
 
@@ -3214,7 +3176,7 @@ sum_abun_unassigned <- unassigned_check_met %>%
   summarize(SumAbundance = sum(Abundance)) %>% 
   print()
 
-print((sum_abun_unassigned / sum_seqs) * 100) # this is the total % of the dataset that was unassigned 18.42325%
+print((sum_abun_unassigned$SumAbundance / sum_seqs$sum_seqs) * 100) # this is the total % of the dataset that was unassigned 18.42325%
 
 sum_abun_assigned_met <- taxa_assigned_met %>% select(OTU, Order) %>%
   left_join(unassigned_check_met, by = "OTU") %>%
@@ -3222,7 +3184,7 @@ sum_abun_assigned_met <- taxa_assigned_met %>% select(OTU, Order) %>%
   summarize(SumAbundance = sum(Abundance)) %>% 
   print()
 
-print((sum_abun_assigned_met / sum_seqs) * 100) # this is the total % of the dataset that got assigned 18.07%
+print((sum_abun_assigned_met$SumAbundance / sum_seqs$sum_seqs) * 100) # this is the total % of the dataset that got assigned 18.07%
 
 otu_assigned_check <- taxa_assigned_met %>% select(OTU, Order) %>%
   left_join(unassigned_check_met, by = "OTU") %>%
@@ -3402,6 +3364,7 @@ unassigned_met <- unassigned_met + labs(x = "Relative Abundance (%)",
 
 unassigned_met
 
+
 unassigned_met + assigned_met &
 #  plot_layout(guides = 'collect') &
   theme(plot.margin = unit(c(t = 0.5, r = 0.5, b = 0.5, l = 0.5), "lines"),
@@ -3467,7 +3430,7 @@ fish_relabun_agg <- make_taxabar_relabun_agg(fish_taxa_order2) +
 
 fish_relabun_agg
 
-ggsave("./plots-final/fish_relabun_agg_barplot.pdf", height = 5, width = 3, units = "in", dpi=300)
+#ggsave("./plots-final/fish_relabun_agg_barplot.pdf", height = 5, width = 3, units = "in", dpi=300)
 
 fish_relabun_deploy <- make_taxabar_relabun_deploy(fish_taxa_order2) + 
   labs(x = "Relative Abundance (%)",
@@ -3479,7 +3442,7 @@ fish_relabun_deploy <- make_taxabar_relabun_deploy(fish_taxa_order2) +
                              override.aes = list(stroke = 1)))
 
 fish_relabun_deploy
-ggsave("./plots-final/fish_relabun_deploy_barplot.pdf", height = 4, width = 9, units = "in", dpi=300)
+#ggsave("./plots-final/fish_relabun_deploy_barplot.pdf", height = 4, width = 9, units = "in", dpi=300)
 
 length(unique(fish_taxa_order2$OTU)) # 667
 
@@ -3500,7 +3463,7 @@ unique(unassigned_check3$OTU) # 2 (as expected)
 
 unassigned_check_vert <- rbind(unassigned_check1, unassigned_check2, unassigned_check3) %>%   
   select(sample, OTU, depth, Abundance, Class, Order, Family, Genus, Species)
-dim(unassigned_check_vert) # 505 x 4
+dim(unassigned_check_vert) # 505 x 9
 head(unassigned_check_vert)
 tail(unassigned_check_vert)
 unassigned_check_vert$OTU %>% unique() # 345 ASVs are unassigned as expected
@@ -3516,7 +3479,7 @@ sum_abun_unassigned <- unassigned_check_vert %>%
   summarize(SumAbundance = sum(Abundance)) %>% 
   print()
 
-print((sum_abun_unassigned / sum_seqs) * 100) # this is the total % of the dataset that was unassigned 12.88%
+print((sum_abun_unassigned$SumAbundance / sum_seqs$sum_seqs) * 100) # this is the total % of the dataset that was unassigned 12.88%
 
 taxa_assigned_vert <- rbind(actinopterygii_assigned, fish_family_assigned, carnivora_genus_assigned)
 head(taxa_assigned_vert)
@@ -3532,7 +3495,7 @@ sum_abun_assigned <- taxa_assigned_vert %>% select(OTU, Order) %>% #I want a lis
   summarize(SumAbundance = sum(Abundance)) %>% 
   print()
 
-print((sum_abun_assigned / sum_seqs) * 100) # this is the total % of the dataset that got assigned 11.93%
+print((sum_abun_assigned$SumAbundance / sum_seqs$sum_seqs) * 100) # this is the total % of the dataset that got assigned 11.93%
 
 otu_assigned_check <- taxa_assigned_vert %>% select(OTU, Family) %>%
   left_join(unassigned_check_vert, by = "OTU") %>%
@@ -3784,28 +3747,28 @@ panel2
 
 ggsave("./plots-final/alleuk_relabun_barplot_pub.pdf", height = 90, width = 180, units = "mm", dpi=300)
 
-
-panel3 <- prot_relabun_deploy / met_relabun_deploy / fish_relabun_deploy + 
-  plot_annotation(tag_levels = "A", tag_suffix = '.') + 
-  plot_layout(guides = 'collect') &
-  theme(plot.margin = unit(c(t = 0.25, r = 0.25, b = 0.25, l = 0.25), "lines"),
-        panel.spacing = unit(6, "mm"),
-        panel.background = element_rect(linewidth = 0.5),
-        plot.title = element_text(size = 8),
-        plot.tag = element_text(size = 8),
-        legend.text = element_text(size = 6, margin = margin(l = 1)),
-        legend.position = "right", 
-        legend.margin = margin(t = 10, r = 20, b = 50, l = 0), 
-        legend.key.size = unit(2.5, 'mm'), 
-        legend.key.height = unit(2.5, "mm"),
-        legend.key.spacing.x = unit(1, "mm"),
-        legend.key.spacing.y = unit(0.5, "mm"),
-        axis.text = element_text(size = 6),
-        axis.title = element_text(size = 8))
-
-panel3
-
-#ggsave("./plots-final/alleuk_relabun_barplot_pub_deploy.pdf", height = 200, width = 180, units = "mm", dpi=300)
+# 
+# panel3 <- prot_relabun_deploy / met_relabun_deploy / fish_relabun_deploy + 
+#   plot_annotation(tag_levels = "A", tag_suffix = '.') + 
+#   plot_layout(guides = 'collect') &
+#   theme(plot.margin = unit(c(t = 0.25, r = 0.25, b = 0.25, l = 0.25), "lines"),
+#         panel.spacing = unit(6, "mm"),
+#         panel.background = element_rect(linewidth = 0.5),
+#         plot.title = element_text(size = 8),
+#         plot.tag = element_text(size = 8),
+#         legend.text = element_text(size = 6, margin = margin(l = 1)),
+#         legend.position = "right", 
+#         legend.margin = margin(t = 10, r = 20, b = 50, l = 0), 
+#         legend.key.size = unit(2.5, 'mm'), 
+#         legend.key.height = unit(2.5, "mm"),
+#         legend.key.spacing.x = unit(1, "mm"),
+#         legend.key.spacing.y = unit(0.5, "mm"),
+#         axis.text = element_text(size = 6),
+#         axis.title = element_text(size = 8))
+# 
+# panel3
+# 
+# #ggsave("./plots-final/alleuk_relabun_barplot_pub_deploy.pdf", height = 200, width = 180, units = "mm", dpi=300)
 
 
 # let's calculate ASV count and relative abundance for all taxa, but this is especially for the "Other" groups
@@ -3852,7 +3815,9 @@ write.csv(fish_taxa_summary, file = "fish_taxa_summary_lowabund.csv")
 
 ```
 
-```{r prot-top-asv, eval = TRUE, message = FALSE, warning = FALSE}
+```{r prot-top-asv-evenness, eval = TRUE, message = FALSE, warning = FALSE}
+
+# Based on alpha diversity, there is an interesting dip in diversity indices at depths where there is high number of observed ASVs. It's likely that this is impacted by evenness e.g. some ASVs are relatively abundant compared to all other ASVs.
 
 head(prot_taxa2)
 
@@ -3916,7 +3881,7 @@ dotplot <- ggplot(prot_dotplot_top, aes(y = fct_rev(depth), (OTU))) +
 
 dotplot
 
-ggsave("./plots-final/jitter_dotplot_topASVs.pdf", height = 80, width = 180, units = "mm", dpi=300)
+#ggsave("./plots-final/jitter_dotplot_topASVs.pdf", height = 80, width = 180, units = "mm", dpi=300)
 
 head(prot_dotplot_top)
 
@@ -3999,7 +3964,7 @@ dotplot / (barplot1 + barplot2) + plot_layout(guides = "collect") + plot_annotat
       axis.text.y = element_text(size = 10),
       axis.title = element_text(size = 10))
 
-ggsave("./plots-final/test_evenness_prot_panel.pdf", height = 120, width = 180, units = "mm", dpi=300)
+ggsave("./plots-final/evenness_prot_panel_pub.pdf", height = 120, width = 180, units = "mm", dpi=300)
 
 
 ```
@@ -4041,7 +4006,6 @@ rare_fish_dist <- rare_fish %>%
 
 head(rare_prot_dist)
 rare_prot_dist_clr <- clr_lite(rare_prot_dist, samples_are = "rows", method = "const", replicates = 1) #We are imputing zeroes using the 'const' method 
-#write.csv(rare_prot_dist_clr, file = "test.csv")
 #Essentially, we replace zeroes with 65% of the next lowest value - see Lubbe et al 2021. 
 
 head(rare_prot_dist_clr)
@@ -4091,7 +4055,7 @@ prot_pca_plot <-
 
 prot_pca_plot
 
-ggsave("./plots-final/beta_diversity_pca_prot.pdf", height = 60, width = 80, units = "mm", dpi=300)
+#ggsave("./plots-final/beta_diversity_pca_prot.pdf", height = 60, width = 80, units = "mm", dpi=300)
 
 rare_met_dist_clr <- clr_lite(rare_met_dist, samples_are = "rows", method = "const", replicates = 1)
 head(rare_met_dist_clr)
@@ -4141,7 +4105,7 @@ met_pca_plot <-
 
 met_pca_plot
 
-ggsave("./plots-final/beta_diversity_pca_met.pdf", height = 60, width = 80, units = "mm", dpi=300)
+#ggsave("./plots-final/beta_diversity_pca_met.pdf", height = 60, width = 80, units = "mm", dpi=300)
 
 
 rare_fish_dist_clr <- clr_lite(rare_fish_dist, samples_are = "rows", method = "const", replicates = 1)
@@ -4212,7 +4176,7 @@ fish_pca_plot_revised <-
 
 fish_pca_plot_revised
 
-ggsave("./plots-final/beta_diversity_pca_fish_revised.pdf", height = 60, width = 80, units = "mm", dpi=300)
+#ggsave("./plots-final/beta_diversity_pca_fish_revised.pdf", height = 60, width = 80, units = "mm", dpi=300)
 
 prot_pca_plot <- prot_pca_plot + ggtitle("Protists (18S)")
 met_pca_plot <- met_pca_plot + ggtitle("Invertebrates (18S)")
@@ -4341,6 +4305,8 @@ posthoc_fish
 
 # In ecological studies, you might use betadisper to determine whether the variability in species composition is similar across different habitat types before running PERMANOVA to compare the centroids of these habitats.
 
+# when results are significant, at least one group (depth) has significantly different dispersion compared to the others, which suggests that depth affects the variability of community composition. However, plotting these will show that group centroids are far apart (e.g. for protists and metazoans) and we can be more confident in our permanova results for group centroids.
+
 #Protists 
 # depth
 bd_prot <- betadisper(dist_prot_clr, prot_sd$depth, type = "median")
@@ -4376,18 +4342,6 @@ prot_bd_plot <-
 prot_bd_plot
 
 boxplot(bd_prot)
-
-
-#interaction
-prot_sd_1 <- prot_sd %>%
-  mutate(depth_deploy = paste0(depth, "_", deployment))
-
-bd_prot <- betadisper(dist_prot_clr, prot_sd_1$depth_deploy, type = "median")
-anova(bd_prot)
-permutest(bd_prot, pairwise = TRUE)
-
-boxplot(bd_prot)
-bd_prot$distances %>% data.frame()
 
 #Metazoa 
 # depth
@@ -4509,7 +4463,6 @@ head(rare_prot_euler)
 depths <- colnames(rare_prot_euler)[1:6]
 depths
 
-
 taxa_colors <- c("#a1c2fd", "#56C4F0", "#399dff",
                  #"#0b62fb", 
                  "#0344b7",
@@ -4549,7 +4502,7 @@ prot_upset <- ComplexUpset::upset(rare_prot_euler, depths,
 
 prot_upset
 
-ggsave("./plots-final/prot_upset.pdf", plot = prot_upset, height = 80, width = 180, units = "mm", dpi=300)
+#ggsave("./plots-final/prot_upset.pdf", plot = prot_upset, height = 80, width = 180, units = "mm", dpi=300)
 
 
 met_taxa_order3$TAXA <- fct_relevel(met_taxa_order3$TAXA, "Arthropoda-Calanoida", "Arthropoda-Cyclopoida",
@@ -4649,7 +4602,7 @@ met_upset <- ComplexUpset::upset(rare_met_euler, depths,
 
 met_upset
 
-ggsave("./plots-final/met_upset.pdf", plot = met_upset, height = 80, width = 180, units = "mm", dpi=300)
+#ggsave("./plots-final/met_upset.pdf", plot = met_upset, height = 80, width = 180, units = "mm", dpi=300)
 
 
 fish_taxa_order3 <- fish_taxa_order2 %>%
@@ -4737,7 +4690,7 @@ fish_upset <- ComplexUpset::upset(rare_fish_euler, depths,
                                   intersections_matrix = theme_custom_upset()))
 fish_upset
 
-ggsave("./plots-final/fish_upset.pdf", plot = fish_upset, height = 30, width = 80, units = "mm", dpi=300)
+#ggsave("./plots-final/fish_upset.pdf", plot = fish_upset, height = 30, width = 80, units = "mm", dpi=300)
 
 
 ## Combined
@@ -4785,7 +4738,6 @@ fish_euler_df$ASV <- rownames(fish_euler_df)
 rownames(fish_euler_df) <- NULL
 fish_euler_df <- fish_euler_df %>% select(ASV, Taxa, "10m", "100m", "300m", "500m", "800m", "1000m")
 head(fish_euler_df)
-
 
 # let's extract the ASVs we think are performing DVM
 head(prot_euler_df)
@@ -5014,7 +4966,7 @@ dvm_fish_plot <- dvm_fish_plot_df %>%
 
 dvm_fish_plot
 
-ggsave("./plots-final/alleuk_fish_dvm_pub.pdf", height = 8, width = 6, units = "in", dpi=300)
+ggsave("./plots-final/alleuk_fish_dvm.pdf", height = 8, width = 6, units = "in", dpi=300)
 
 ```
 
