@@ -1092,7 +1092,7 @@ prot_list
 
 prot_alpha_div <- prot_list %>% 
   reduce(inner_join, by='sample') %>%
-  dplyr::select(sample, obs, shannon, invsimpson, deployment, diel, depth, uniqueID, depth_group)
+  dplyr::select(sample, obs, shannon, invsimpson, deployment, diel, depth, depth_group)
 
 # let's add an organism group column
 prot_alpha_div$Group <- "Protists"
@@ -1264,7 +1264,7 @@ met_list = list(shannon_df,invsimpson_df, obs_df, metadata_18s)
 
 met_alpha_div <- met_list %>% 
   reduce(inner_join, by='sample') %>%
-  dplyr::select(sample, obs, shannon, invsimpson, deployment, diel, depth, uniqueID, depth_group)
+  dplyr::select(sample, obs, shannon, invsimpson, deployment, diel, depth, depth_group)
 
 # let's add an organism group column
 met_alpha_div$Group <- "Metazoa"
@@ -1446,7 +1446,7 @@ fish_list = list(shannon_df, invsimpson_df, obs_df, metadata_12s)
 
 fish_alpha_div <- fish_list %>% 
   reduce(inner_join, by='sample') %>%
-  dplyr::select(sample, obs, shannon, invsimpson, deployment, diel, depth, uniqueID, depth_group)
+  dplyr::select(sample, obs, shannon, invsimpson, deployment, diel, depth, depth_group)
 
 # let's add an organism group column
 fish_alpha_div$Group <- "Fish"
@@ -1464,7 +1464,7 @@ load("fish_alpha_indices_rarefied.RData", verbose = T)
 
 ```{r save-rdata-rarefaction-stats, eval = TRUE, message = FALSE, warning = FALSE}
 
-save(prot_mean_sd, prot_mean_sd_shannon, prot_mean_sd_invsimp, met_mean_sd, met_mean_sd_shannon, met_mean_sd_invsimp, fish_mean_sd, fish_mean_sd_shannon, fish_mean_sd_invsimp, file = "./alleuk_mean_sd_rarefaction_stats.RData")
+save(prot_mean_sd_sobs, prot_mean_sd_shannon, prot_mean_sd_invsimp, met_mean_sd_sobs, met_mean_sd_shannon, met_mean_sd_invsimp, fish_mean_sd_sobs, fish_mean_sd_shannon, fish_mean_sd_invsimp, file = "./alleuk_mean_sd_rarefaction_stats.RData")
 
 load("./alleuk_mean_sd_rarefaction_stats.RData", verbose = T)
 
