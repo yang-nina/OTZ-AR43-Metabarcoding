@@ -1,5 +1,5 @@
 ---
-title: "phyloseq-ctd-eukarya"
+title: "ar43-diversity"
 author: "Nina Yang, Postdoctoral Investigator, WHOI"
 created date: "2023-02-04"
 last updated: "2025-05-13"
@@ -2598,9 +2598,11 @@ fish_asv_plot
 ```{r save-load-asv-files, eval = TRUE, message = FALSE, warning = FALSE}
 
 # save files to avoid redoing work
-save(prot_asv, met_asv, fish_asv, fish_asv2, file = "./asv_tables_alltaxa_for_plotting.RData")
+#save(prot_asv, met_asv, fish_asv, fish_asv2, file = "./asv_tables_alltaxa_for_plotting.RData")
 
-load(file = "./asv_tables_alltaxa_for_plotting.RData", verbose = T)
+#load(file = "./asv_tables_alltaxa_for_plotting.RData", verbose = T)
+
+save(prot_taxa, met_taxa_order2, fish_taxa_order, file = "./psmelt_tables_for networks.RData")
 
 ```
 
