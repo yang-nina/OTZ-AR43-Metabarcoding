@@ -2,3 +2,7 @@
 *.pdf
 *.afdesign
 .DS_Store
+*.qza
+*.qzv
+*.rds
+*.zip
