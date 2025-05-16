@@ -1,0 +1,269 @@
+---
+title: "ar43-ctd"
+author: "Nina Yang, Postdoctoral Investigator, WHOI"
+created date: "2024-01-19"
+last updated: "2025-05-16"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+## Plotting ctd depth profiles
+
+```{r install-packages, eval = TRUE, message = FALSE, warning = FALSE}
+
+# install packages, if required
+if(!require(tidyverse)){install.packages("tidyverse")}
+if(!require(oce)){install.packages("oce")}
+if(!require(sf)){install.packages("sf")}
+if(!require(patchwork)){install.packages("patchwork")}
+
+```
+
+```{r load-packages, eval = TRUE, message = FALSE, warning = FALSE}
+library(tidyverse); packageVersion("tidyverse")
+library(oce); packageVersion("oce")
+library(sf); packageVersion("sf")
+library(patchwork); packageVersion("patchwork")
+
+```
+
+```{r themes, eval = TRUE, message = FALSE, warning = FALSE}
+
+theme_custom_paper <- function() {
+  theme_bw(
+    base_size = 8) + 
+    theme(
+      # plot background
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_rect(fill = 'transparent'), 
+      plot.background = element_rect(fill = 'transparent'),
+      panel.border = element_rect(colour = "black", fill = NA, linewidth = 1),
+      # axes
+      axis.text.y = element_text(colour = "black"), 
+      axis.text.x = element_text(colour = "black"), 
+      # legend
+      legend.text = element_text(colour ="black"), 
+      legend.position = "right",
+      legend.title = element_text(colour = "black"), 
+      legend.background = element_rect(color = NA, fill='transparent'), 
+      legend.box.background = element_rect(color = NA, fill='transparent'),
+      # faceting
+      strip.background.y = element_rect(color = "black", fill = "#ededed", linewidth = 1, linetype = "solid"), 
+      strip.background.x = element_rect(color = "white", fill = 'transparent', linewidth = 1, linetype = "solid"),
+      strip.text = element_text(size = 8)
+      )
+}
+
+```
+
+```{r process-data-ctd, eval = TRUE, message=FALSE, warning=FALSE}
+
+# Get a list of all .cnv files for AR43
+file_list <- list.files(path = "ctd_files", pattern = "\\.cnv$", full.names = TRUE)
+file_list
+
+stn1 = read.ctd(file_list[1])
+print(head(stn1))
+dev.new()
+plot(stn1)
+  
+stn1@data %>% as.data.frame() %>% dplyr::glimpse()
+stn1 = stn1 %>% ctdTrim(method = "downcast")
+plot(stn1)
+  
+stn1.tb = stn1@data %>% as.data.frame()
+print(head(stn1.tb))
+           
+stn1.tb = stn1.tb %>% 
+  mutate(datetime = stn1@metadata$date, 
+         lon = stn1@metadata$longitude,
+         lat = stn1@metadata$latitude) %>%
+  separate(datetime, c("date", "time"), sep = " ") %>%
+  dplyr::select(date, time, lon,lat,depth, pressure,temperature, salinity,
+                oxygen, fluorescence, spar) %>%
+  mutate(cast = substr(file_list[1], 8, nchar(file_list[1])-4)) # Get the file name without path and extension as cast. This may have to be adjusted depending on the naming scheme of your cast data.
+
+stn2 = read.ctd(file_list[2])
+print(head(stn2))
+dev.new()
+plot(stn2)
+  
+stn2@data %>% as.data.frame() %>% dplyr::glimpse()
+stn2 = stn2 %>% ctdTrim(method = "upcast")
+plot(stn2)
+  
+stn2.tb = stn2@data %>% as.data.frame()
+print(head(stn2.tb))
+  
+stn2.tb = stn2.tb %>% 
+  mutate(datetime = stn2@metadata$date, 
+         lon = stn2@metadata$longitude,
+         lat = stn2@metadata$latitude) %>%
+  separate(datetime, c("date", "time"), sep = " ") %>%
+  dplyr::select(date, time, lon,lat,depth, pressure,temperature, salinity,
+                oxygen, fluorescence, spar) %>%
+  mutate(cast = substr(file_list[2], 8, nchar(file_list[2])-4)) # Get the file name without path and extension as cast
+
+
+stn7 = read.ctd(file_list[7])
+print(head(stn7))
+plot(stn7)
+  
+stn7@data %>% as.data.frame() %>% dplyr::glimpse()
+stn7 = stn7 %>% ctdTrim(method = "upcast")
+plot(stn7)
+  
+stn7.tb = stn7@data %>% as.data.frame()
+print(head(stn7.tb))
+  
+stn7.tb = stn7.tb %>% 
+  mutate(datetime = stn7@metadata$date, 
+         lon = stn7@metadata$longitude,
+         lat = stn7@metadata$latitude) %>%
+  separate(datetime, c("date", "time"), sep = " ") %>%
+  dplyr::select(date, time, lon,lat,depth, pressure,temperature, salinity,
+                oxygen, fluorescence, spar) %>%
+  mutate(cast = substr(file_list[7], 8, nchar(file_list[7])-4)) # Get the file name without path and extension as cast
+
+result_df <- rbind(stn1.tb, stn2.tb, stn7.tb)
+
+# Check the result
+head(result_df)
+tail(result_df)
+
+```
+
+```{r plot-ctd, eval=TRUE, message=FALSE, warning=FALSE}
+
+# set colors
+colors_all <- c("#3399ff", "#ffb400", "#9080ff")
+# set cast_df for plotting
+cast_df <- result_df
+head(cast_df)
+tail(cast_df)
+dim(cast_df)
+
+# plot temperature
+temp = ggplot(data = cast_df%>%na.omit(),
+              aes(x = temperature, y = depth, color = cast)) +
+  geom_path(linewidth = 1.5, alpha = 0.75) +
+  geom_hline(yintercept = c(10, 100, 300, 500, 800, 1000), linetype = "dashed", linewidth = 0.5, color = "black") +
+  scale_y_reverse(breaks = seq(0,1000,200))  +
+  scale_color_manual(values = colors_all) +
+  scale_x_continuous(breaks = seq(4, 16, 2), position = "top") +
+  theme(axis.text = element_text(size = 8, colour = 1),
+        axis.title = element_text(size = 8, colour = 1))+
+  labs(x = expression("Temperature (\u00B0C)"), y = "Depth (m)") +
+  guides(color = guide_legend(title="CTD Cast")) +
+  theme_custom_paper()
+  #theme_custom_ppt_blkbg()
+
+temp
+
+# plot salinity
+sal = ggplot(data = cast_df%>%na.omit(),
+             aes(x = salinity, y = depth, color = cast))+
+  geom_path(linewidth = 1.5, alpha = 0.75) +
+  geom_hline(yintercept = c(10, 100, 300, 500, 800, 1000), linetype = "dashed", linewidth = 0.5, color = "black") +
+  scale_y_reverse(breaks = seq(0,1000,200))  +
+  scale_color_manual(values = colors_all) +
+  scale_x_continuous(breaks = seq(35, 36, 0.4), position = "top") +
+  theme(axis.text = element_text(size = 8, colour = 1),
+        axis.title = element_text(size = 8, colour = 1))+
+  labs(x = "Salinity (PSU)", y = "Depth (m)") + 
+  guides(color = guide_legend(title="CTD Cast")) +
+  theme_custom_paper()
+  #theme_custom_ppt_blkbg()
+
+sal
+
+# plot fluorescence
+
+fluor = ggplot(data = cast_df%>%na.omit()%>%filter(depth<200),
+               aes(x = fluorescence, y = depth, color = cast)) +
+  geom_path(linewidth = 1.5, alpha = 0.75) +
+#  geom_hline(yintercept = c(10, 100, 300, 500, 800, 1000), linetype = "dashed", linewidth = 0.5, color = "black") +
+  scale_y_reverse(breaks = seq(0,1000,200))  +
+  scale_color_manual(values = colors_all) +
+  scale_x_continuous(breaks = seq(0,2,0.5), position = "top") +
+  theme(axis.text = element_text(size = 10, colour = 1),
+        axis.title = element_text(size = 10, colour = 1)) +
+  labs(x = expression(~Fluorescence~(mg/m^3)), y = "Depth (m)") + 
+  guides(color = guide_legend(title="CTD Cast")) +
+  theme_custom_paper()
+
+fluor
+
+# plot oxygen
+oxy = ggplot(data = cast_df%>%na.omit(),
+               aes(x = oxygen, y = depth, color = cast)) +
+  geom_path(linewidth = 1.5, alpha = 0.75) +
+  geom_hline(yintercept = c(10, 100, 300, 500, 800, 1000), linetype = "dashed", linewidth = 0.5, color = "black") +
+  scale_y_reverse(breaks = seq(0,1000,200))  +
+  scale_color_manual(values = colors_all) +
+  scale_x_continuous(breaks = seq(0,6,1), position = "top") +
+  theme(axis.text = element_text(size = 8, colour = 1),
+        axis.title = element_text(size = 8, colour = 1)) +
+  labs(x = expression(~Oxygen~(ml/l)), y = "Depth (m)") + 
+    guides(color = guide_legend(title="CTD Cast")) + 
+  theme_custom_paper()
+  #theme_custom_ppt_blkbg()
+
+oxy
+
+
+# arrange plots in a panel
+ctd_panel <- temp + sal + oxy +
+    plot_layout(guides = 'collect', ncol = 3)
+
+ctd_panel
+
+# ggsave("./ctd_plots/ar43_ctd_profile_depth_lines.pdf", height = 4, width = 8, units = "in", dpi=300)
+
+```
+
+```{r plot-ctd, eval=TRUE, message=FALSE, warning=FALSE}
+# map of sample sites with spatial features files from: https://www.naturalearthdata.com/
+
+# read in the land spatial feature (downloaded from natural earth (1:10))
+land <- read_sf("~/Documents/Git/Biodiversity_Databases/Shapefiles/ne_10m_land/", "ne_10m_land")
+
+# read in the ocean spatial feature (downloaded from natural earth (1:10))
+ocean <- read_sf("~/Documents/Git/Biodiversity_Databases/Shapefiles/ne_10m_ocean/", "ne_10m_ocean")
+
+# read in state files. I don't need all these, but good to have on hand for other stuff.
+states <- read_sf("~/Documents/Git/Biodiversity_Databases/Shapefiles/ne_50m_admin_1_states_provinces", "ne_50m_admin_1_states_provinces")
+
+lon <- unique(cast_df$lon)
+lat <- unique(cast_df$lat)
+
+coord_sf <- as.data.frame(cbind(lon, lat))
+coord_sf$station <- rep(c("St1", "St2", "St7"))
+head(coord_sf)
+
+map <- ggplot() + 
+  geom_sf(data = ocean, fill = "#d0e6ff", color = NA) +
+  geom_sf(data = land, fill = "#f2ebdc", color = "#172D3B") +
+  geom_sf(data = states, fill = NA, color = "#172D3B", alpha = 0.5) +
+  #set breaks on y-axis
+  scale_y_continuous(limits = c(39, 44), breaks = c(40, 42, 44)) +
+  #set breaks on y-axis
+  scale_x_continuous(limits = c(-72.8, -69.5), breaks = c(-72, -70)) + 
+  geom_point(data = coord_sf, aes(x = lon, y = lat, fill = station), color = "#172D3B", shape = 24, size = 2, alpha = 0.8) +
+  labs(x = NULL, y = NULL) + 
+  scale_fill_manual(values = colors_all) + theme_custom_paper() + 
+  theme(legend.position = "none")
+
+map
+
+all <- map + ctd_panel + plot_layout(guides = "collect") 
+
+all
+
+ggsave("./ctd_plots/ar43_map_ctdpanel_pub.pdf", plot = all, width = 180, height = 80, units = "mm", dpi = 300)
+  
+
+```
+  
