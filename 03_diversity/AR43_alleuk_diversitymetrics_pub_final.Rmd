@@ -2602,7 +2602,7 @@ fish_asv_plot
 
 #load(file = "./asv_tables_alltaxa_for_plotting.RData", verbose = T)
 
-save(prot_taxa, met_taxa_order2, fish_taxa_order, file = "./psmelt_tables_for networks.RData")
+save(prot_taxa, met_taxa_order2, fish_taxa_order, file = "./psmelt_tables_for_networks.RData")
 
 ```
 
