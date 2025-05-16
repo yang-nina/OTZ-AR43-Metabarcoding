@@ -6,3 +6,5 @@
 *.qzv
 *.rds
 *.zip
+.Rproj.user
+*.fasta
