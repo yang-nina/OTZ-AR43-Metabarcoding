@@ -224,7 +224,7 @@ ctd_panel
 
 ```
 
-```{r plot-ctd, eval=TRUE, message=FALSE, warning=FALSE}
+```{r plot-ctd-withmap, eval=TRUE, message=FALSE, warning=FALSE}
 # map of sample sites with spatial features files from: https://www.naturalearthdata.com/
 
 # read in the land spatial feature (downloaded from natural earth (1:10))
