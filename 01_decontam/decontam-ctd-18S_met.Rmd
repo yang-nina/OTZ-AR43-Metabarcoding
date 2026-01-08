@@ -64,10 +64,10 @@ tail(metadata)
 metadata <- metadata %>% select(-c(duration))
 metadata$sample <- rownames(metadata)
 rownames(metadata)
-rownames(metadata) <- metadata$sample_id
+rownames(metadata) <- metadata$sample.id
 head(metadata)
 
-a## taxonomy
+## taxonomy
 taxonomy <- read_qza("../00_qiime2-outputs/18S/ar43-18s-silvadb-taxonomy-naivebayes.qza")
 head(taxonomy$data)
 strsplit_output <- (strsplit(as.character(taxonomy$data$Taxon), ";"))
