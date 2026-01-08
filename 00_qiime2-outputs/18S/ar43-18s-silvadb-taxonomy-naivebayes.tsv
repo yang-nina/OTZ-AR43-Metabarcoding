@@ -1,0 +1,501 @@
+Feature ID	Taxon	Confidence
+#q2:types	categorical	categorical
+1a8c8a1f715c8e84d51bcd6c08f20835	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9565521417804121
+8e94aa53e61d5b52c47e0c769ae06197	d__Eukaryota; k__Animalia	0.9999993785432288
+67589389e1fdd42f0acbe10c97a03e61	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9995110582264678
+51627b4ac2bd9b965b19ece47cf65281	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9886085394105373
+741088598e001d7ed41909f1414cd2b0	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9986834003967384
+6e3a0cde24c04bb5318f0827c2e9d85a	d__Eukaryota; k__Animalia; p__Tunicata; c__Thaliacea; o__Salpida; f__Salpida; g__Salpida; s__Salpa_thompsoni	0.9996708347233995
+a324302dd50eaa757a18424b4ee0d0ff	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9958596349757477
+517c16300e566886759a218dfdc79c95	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9721245895554097
+b503a591759a010221e29a89d1cdd878	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9890045555249704
+e7775126d592f3b9fed0760993e40d0a	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9970162394762979
+43c194e0801f3987ba2ede7fedf680ff	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.8887035444547369
+5ffa38f55818486c471279c2a91c0609	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9765843492655913
+3b839477a29ee930ce0deaa8d7143e81	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.9397398941923537
+eb43fc67f81c3b43743e234f18d6a076	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9205924625400144
+70b15e7d989f943cae8d8005743fee83	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.9395681033535669
+37fbde8cf8edac9d12cf20253da488de	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca; o__Eucarida; f__Eucarida; g__Eucarida; s__Thysanoessa_longipes	0.9999988227063991
+cf87814776398f3c3ad71c6b0e7fd086	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9958733704075085
+08dbcbc42067f17c2cb53fe237310b5e	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9988325769726262
+f719c8dd9b927c3606791d622323fe13	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9877436497357742
+2407f2d992db7ab1b4b371ffad9f57d9	d__Eukaryota; k__Animalia; p__Ctenophora; c__Tentaculata; o__Cydippida; f__Cydippida; g__Cydippida; s__Lampea_pancerina	0.9181094760915876
+1a29af58eac67385c48298b336f1cb89	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999962523886432
+cc2be40a53475ffcc049703af83677ea	d__Eukaryota; k__Animalia	0.9999753764657664
+049d4f8785b0b54aaf378896e837565e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9972903850501514
+5558c5f4832da2ee057a784037ba19d0	d__Eukaryota; k__Animalia	0.9974138557931094
+4c355126db7b60a9e29eaecf9a521a97	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.999991914898089
+2f4f8d6aef04b2e63de3278e7faf0c73	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida	0.8258973391389447
+140ea2f6e5ffd958aa0f7224eeab3caa	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9842465341412144
+05fe065b48c353de4b5db9977402b158	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999761307055249
+e0a16f98b564fab60559ee961dd08dac	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999853420586025
+1e52cc251818265e3f35def8298b6e77	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9966800440903781
+8747e55f2876394fe809c87c41c7029a	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida	0.8883287515515306
+fce3c59d3c2258f9063f7db86dfd73a4	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Poecilostomatoida; f__Poecilostomatoida; g__Poecilostomatoida; s__Sapphirina_darwinii	0.9835025218484829
+66f2aa9c2fca622a5567cdabb73e9d6f	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Coronatae; f__Coronatae; g__Coronatae; s__Atolla_vanhoeffeni	0.9999968954752506
+7dd385ce60a86ccc9afecd73d21fe54c	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.9999999831323267
+77346ce39ada8fd815aa222cb5271f92	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999833974022118
+f8d28a949b7f0508e92f4c470c9032d7	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.999163800597347
+bf9d70bc6d65bd1874fce3aa7894d077	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.971551841066075
+c38fa1d91765da2dcb918b509321771e	d__Eukaryota; k__Animalia; p__Ctenophora; c__Tentaculata; o__Cydippida; f__Cydippida; g__Cydippida; s__Undescribed_mertensiid	0.9038770754469596
+01d454571201946481b2e43ba9cf04a0	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9693038023293596
+6ff11355945f60ff9eb4489a0fefa0ed	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.999337327231891
+0c7a1b36a55ed09019e0349c51eec7f3	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_metazoan	0.9414713943417582
+c980e16c7a927570f0e8e5f5c2641487	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999970276385264
+f8dc0598dfb6e3279407f37a14812970	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachymedusae; f__Trachymedusae; g__Trachymedusae; s__Pantachogon_haeckeli	0.9999977415380452
+b686b4389b069789c838eed23a249c5e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9975343865820517
+9f21969142733f6883477e698cdb32fa	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9929577575784336
+4986c929c5a1c1e13f0e3e6e432acec7	d__Eukaryota	0.9999999999999865
+ff6d690d0a3755e34e3f24e583e19c93	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.9999595540780988
+ef3f8b3904f832327ed1a2f8c3bd8526	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae	0.9989754150094682
+efdd0511ae419c68f0428efe568c2434	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__Sinocalanus_sinensis	0.9105780897147762
+1bb66042ac7794ed2ec3834ce78d43f1	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.9586314659463915
+6c6cf16fb21bef83332b62da58a75a45	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9446920059890576
+016ab1cfad3534e7a3d79a4c5f33033b	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9727099174673494
+3344e0753b88c8aa8359d33c943a68f5	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9975677304273248
+365c7b8a2b619da4d520dc72698a3a6e	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae	0.9999945219169416
+052686d6eddfee9f88fd9f07d78e1091	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9987638259227116
+59cfb6ceb61511d4774fc85810c5dc42	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Semaeostomeae; f__Semaeostomeae; g__Semaeostomeae; s__Phacellophora_camtschatica	0.9999999997478994
+e1f2dc6ca63aec5746d9321b41a4aa8e	d__Eukaryota	0.9999999880579737
+f60fa3398938e5e640395b870e5169c3	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa	0.9770201587057254
+792972f1ede5928ea461e61690c7709a	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.8708514728950009
+50257fd73cb96e7f8be552ce844a5e47	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.999973808280048
+d51c1867b9c23f1888ba8d80c0e4d571	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999725110831182
+681981f442955339df0f6d49b657e52a	d__Eukaryota; k__Animalia; p__Ctenophora; c__Tentaculata; o__Cydippida; f__Cydippida; g__Cydippida; s__Undescribed_mertensiid	0.9434345604390717
+ffdbbe8ceffb57716b0ea5c50b399dfe	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Pandea_sp.	0.999722020155981
+9beebe8fe438b2e1b863d423d491b268	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Solmissus_marshalli	0.9999984824146969
+7fd4cdba340e8bc1489e2adecd7b2154	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida; s__Nephtys_hombergii	0.9951325233426506
+1e4ba46d75ff78ccd3d95491bd321fef	d__Eukaryota; k__Animalia	0.852641180392518
+fca487895ba94c80f854cbe96fb041a5	d__Eukaryota	0.999997005784258
+d1ae5258855431da6cb5383eac9c112f	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9885673505808117
+715a0951fc8cb2f996baa81b5740378a	d__Eukaryota; k__Animalia; p__Vertebrata; c__Mammalia; o__Mammalia; f__Mammalia; g__Mammalia	0.9789241264592847
+0ae87e229c9846270aa798af93b44825	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.9534390230455227
+b24af785e3b4b070fa58ad8803f6a379	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9998460945356548
+099c75b7b62ae1bbfa3cb8fcc7d3a3fd	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9992207279614593
+81e82fcb292a89e7f63af97126d97ec2	d__Eukaryota; k__Animalia; p__Chaetognatha; c__Sagittoidea; o__Monophragmophora; f__Monophragmophora; g__Monophragmophora; s__Xenokrohnia_sorbei	0.9408633640603072
+6d20de8f30e690dd2b000518fea00757	d__Eukaryota; k__Animalia; p__Ctenophora; c__Tentaculata; o__Cydippida; f__Cydippida; g__Cydippida; s__Lampea_pancerina	0.8463700229332184
+fc1077d723d57e82fc1344524033fb6f	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachylinae; f__Trachylinae; g__Trachylinae; s__uncultured_eukaryote	0.9999985909298468
+79e9ae5111b969edd6193bc6dc172a76	d__Eukaryota; k__Animalia; p__Ctenophora	0.9999934211566167
+94d2cdd5e1d81d8b60ffafe129d84271	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.9818448353792772
+58281c80296ed694087aadda72a2807d	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.8002379146529288
+b1e6f699cfa63e026361434d858d728b	d__Eukaryota; k__Animalia	0.8291771697442156
+7eefe15d7b7fe21d9d738748f5970d5f	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9478697753249911
+bbcd03bb6a6db7faa0c9b64b57db0378	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9419993755353298
+02ff37334f005e7518269da46573fa25	d__Eukaryota; k__Animalia	0.8704456564036364
+9aa56e3ade394e78f1bba947ad8e020c	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Cunina_frugifera	0.9999692799875938
+b3a8ed588b50de7ea7fec9913ff9ba64	d__Eukaryota; k__Animalia	0.8052430213540258
+3e49921662e4a345b4622d5934d53d6e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999132757761398
+33fa9b95db0c81a921f0bd6c26ca270d	d__Eukaryota; k__Animalia	0.8675171489132998
+3fa981cfe604116a80da9d1d3b5813f0	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.99438204667913
+fb5eebb6983a17c092cafea61880d618	d__Eukaryota	0.9999999999978054
+11d06a7d36661358d0119170b3fdfcb8	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9061380226829815
+96a68a609a37d8a636105c575544824e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9972137813359887
+e02b92ca6d500b3beec898db13e92356	d__Eukaryota; k__Animalia; p__Cnidaria	0.9019598277865197
+7052d5fab652e299b95761cf2d477459	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.9108347533436799
+ca0d6fcd134a27d51d0101a260e2a1d7	d__Eukaryota	0.9999999889047828
+5afef1109ced5c03c662205a2eb4d56a	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.9698078726566609
+1ff1fff946d91c31af81d78212918049	d__Eukaryota; k__Animalia	0.9999988540818385
+9f936803dd027258bda71f32b7aec5ac	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9506007219514491
+82d2aba200983590520abb9467eb8b07	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.999988504745635
+74275fdce00c75de68b49b0a70daf9c0	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9997154700406855
+afc4e0b484ee6cac163e04b798ca9cb7	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachymedusae; f__Trachymedusae; g__Trachymedusae; s__Pantachogon_haeckeli	0.9999978219386195
+e9d600d49b1f9f49f80472291f3669d2	d__Eukaryota; k__Animalia	0.9939479743514323
+df2580d65da348ac6810a03cff41a903	d__Eukaryota; k__Animalia	0.9942278963884693
+7a995efda25e41a83376ab010c925262	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9849492648527025
+2b39687299b13e26c3570e47067e3e2f	d__Eukaryota; k__Animalia	0.8772194663492343
+fcb2722e13d81db779d7d515ea70d445	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9955966965253594
+4238e8c7f636a7e948636a9b47f1593c	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9984711407359418
+968376f3d3420460b9c45d30ae8aecab	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9997516411187001
+12a21547f8465d950da87dfc4c0a5c93	d__Eukaryota	0.9999987953570917
+74a63161399ae5b1dcc75ea236024213	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9958992870680918
+a45e1c14b1044ba3b938bb6394d55cd5	d__Eukaryota; k__Animalia	0.8752474939795124
+0fa9a39ce5c6418a203d785f2a812fa2	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.8430394644498869
+6012dbf9854989bdf326e5115226236b	d__Eukaryota; k__Animalia; p__Ctenophora	0.9999237172567037
+8ac15d956796f1d13e2a13500c40a524	d__Eukaryota; k__Animalia	0.8856933830952141
+ca54adb5e80024458d3a65e5d0dd1044	d__Eukaryota; k__Animalia	0.8097975984848547
+ee72532e36f9fd5c46940b50cdaf6fcf	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.997497353200453
+268d84d4df973e6d848ce4e653550029	d__Eukaryota; k__Animalia	0.8861738126145129
+8591639689c19759db97a6beac01293a	d__Eukaryota; k__Animalia	0.8793279640978287
+050a6aa9586bf348966a2a86dfd437b9	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Cunina_frugifera	0.999999792181875
+5975fdafffed16db3ab5194d2076fcf6	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.984470069565399
+071fb19ec0a465e020047ce6341ef450	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9958972082968841
+04d7bcb12758ad31a81281bc568ebe62	d__Eukaryota; k__Animalia; p__Ctenophora	0.9999169758771912
+075376a50f01c6da8c946733dd900e19	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__uncultured_eukaryote	0.997315100847236
+af45d7945a07c23967f5430fabb10318	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999944469892761
+4c385c425d55a6e1af509b9745d776a0	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachymedusae; f__Trachymedusae; g__Trachymedusae; s__Pantachogon_haeckeli	0.9999999939641527
+dad10c2cb983bf586dd553ee65f7099b	d__Eukaryota	0.9999999929082153
+4669c006de0b3a7bafcc6f1a7f112f80	d__Eukaryota; k__Animalia	0.9946441617139659
+6c261f36286e8f182fceecb4c798b291	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida	0.8988006202489258
+f8e788fae61df6ef0b3f087f776b1c33	d__Eukaryota; k__Animalia; p__Ctenophora	0.9999964854070686
+c767bb0686e192e049eeb1c1911431a9	d__Eukaryota; k__Animalia	0.9964664810721968
+2b80762289249aaa64abb7d0b91cc660	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida	0.9997838702312875
+43282e2956f2b86b26d3e742be2d3a55	d__Eukaryota; k__Animalia	0.8932052831155475
+cab270a65950d05aaa41e4500d90445c	d__Eukaryota; k__Animalia	0.8587534115897667
+7231026352ab0b3c70ff93daf2017bb4	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__Anthessius_sp.	0.9816291919601428
+c0bf2cc64f73aff0718f7e7d868bf0d0	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachylinae; f__Trachylinae; g__Trachylinae; s__Liriope_tetraphylla	0.9999773954084127
+dda490c620aa1cec7d7c982779cdd1c7	d__Eukaryota; k__Animalia; p__Mollusca; c__Gastropoda; o__Heterobranchia; f__Heterobranchia; g__Heterobranchia	0.9999999999995832
+c47881cf033a3bb4a1ef72f6f64588dc	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9425057150300333
+7b29611803135c392e4a5a1b5e192359	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9993281958647817
+a0c2aee256d6b678365c9ced0373188e	d__Eukaryota	0.9999979272950126
+2f95b92e4fe4d6919de0eb86c095c2b4	d__Eukaryota; k__Animalia	0.8482782461562087
+dbf305dbafe365cc99ecc4eadc7444d4	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.8541584671759571
+0e7ba16e330be63208351c3b0fdd6a3e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca; o__Eucarida; f__Eucarida; g__Eucarida; s__Thysanoessa_longipes	0.9999983609902688
+270ecc92a2c140a93821eb8bd4e57ada	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.90764519829961
+a6c29b08b776bdd5add292495cc409b8	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Coronatae; f__Coronatae; g__Coronatae; s__Atolla_vanhoeffeni	0.9796324738244684
+263ab5c30d60545afd8aaf5b6fa375cb	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Pandea_sp.	0.9999923850026035
+b686f40db36d4687cad71ec1b912890c	d__Eukaryota; k__Animalia; p__Gastrotricha; c__Gastrotricha; o__Chaetonotida; f__Chaetonotida; g__Chaetonotida	0.9972655407459735
+a3a9fb034681647cb6b08783d925b5a7	d__Eukaryota; k__Animalia	0.8746674497207894
+1d803c600a9d717ef2301f1587744315	d__Eukaryota; k__Animalia	0.9514490000080505
+5db43078ef2a96ff3cdd272b6fd112d1	d__Eukaryota; k__Animalia	0.890381027645106
+271ee788d2a3dfdaa2c40fb5729111d2	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.9999812788313371
+56692389bb78a568da9fbad10e9d0c8a	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9991077449342616
+ba50a7396ee9d40bfadc7d4ad23d4a25	d__Eukaryota; k__Animalia	0.8703550337132366
+1a096a5aced125d14d7bd016f2b50549	d__Eukaryota; k__Animalia	0.8934775269414441
+586ae88dde1a3eb7ccdd767ab072877b	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida; s__Lepidonotus_sublevis	0.9986627555038142
+dfdbba6227b19dc0a21f1c6e332faf1f	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.8878852266927783
+fd9b07ebdf595d197d6977d2f60bca73	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9993115011710173
+ee081352388aea9e14e40fc1ca2d6f7a	d__Eukaryota	0.9988340009418016
+e78111a7506a679ea5e3c09e2199ac94	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.8959424823873495
+450a926cbcec88b36699f1f7c85f4421	d__Eukaryota; k__Animalia	0.8231762645491347
+d557d15dff69eea579b6cb252b1c7c8c	d__Eukaryota	0.999999784712198
+1be607a97dd5be63ec2a548f8611901c	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9954002642485679
+9cc20257b218b67c4c23d5fb592c2e0b	d__Eukaryota	0.9999999999695726
+e2c9700ec333a2aaaee9f0f410372cbe	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.8570474869301514
+f6d7b514845c955227db05347309cc5c	d__Eukaryota; k__Animalia	0.9990841602002303
+a30332d509821a12475ceedb126106ab	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__uncultured_eukaryote	0.9999911554109159
+ef159d42da63bd96184ae19cd39f70a9	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.9983789760383769
+3d3cb70e680c1018641a9db0e92ea0e1	d__Eukaryota; k__Animalia	0.818134127277966
+8061324f84ff2770f02874370a436645	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Eunicida; f__Eunicida; g__Eunicida	0.9999961338046204
+fdea887c6a39aff312e9557019acea14	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9986454576328749
+46871f147cc6f2e6f6da56407213c035	d__Eukaryota; k__Animalia	0.9999976378573308
+b52677cfb25582bcb9bcd678ef76fd40	d__Eukaryota; k__Animalia	0.9147325941259965
+ad5e1dc81f5e4ca41938c5bfad7fe01e	d__Eukaryota; k__Animalia; p__Tunicata; c__Thaliacea; o__Salpida; f__Salpida; g__Salpida; s__Salpa_thompsoni	0.9569809785249977
+64c23a21c4813090eb260dabea48dc73	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9474649818945708
+c4f576a7cce5668fa26ae601c7ac1ae3	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.8957442186040806
+5a1bf8bd6aa275cee099dea6bf989e07	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.998898537991791
+ea66f2c21d0f94e13a25bc78a88aede4	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Pandea_sp.	0.9996458722678369
+3dfd617867c739fa96b567e0f83f5a79	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9990492712673387
+61d2006ff70a2ea42dd173fa0244904e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9617506859650128
+0a2de7e900a6707120e06d4522ad2aa9	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9344442752245002
+bc2375e63b213492f53e89462bfed033	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.8934039906802576
+cbc7b17d2b240e1c155cb255f2d2b3fb	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Cunina_frugifera	0.9519850614079525
+bb5ae9b7c1402211ce526c1b8e9e588c	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9954753804697557
+e06aacc38614bdfa8eac4f8c38210ad1	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Cunina_frugifera	0.9772192322262145
+6f0db079507e7e3ab6d8a21a2ea454fa	d__Eukaryota; k__Animalia	0.8456142043245841
+74ec02387943e557738c51162160e1d4	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida	0.807258366917009
+56ec996a50fd43649d5c526ef19e88d7	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Capitellida; f__Capitellida; g__Capitellida; s__Scalibregma_inflatum	0.8011277348166282
+f2536050db61368e422fe65cebdbeaf2	d__Eukaryota; k__Animalia	0.8661641383375301
+7a33c07ddb6911a68f986d35b27f5ed9	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9470066278549941
+9fe942c1b6f524a6183c48f0f9e08970	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9814958410915054
+adc33baf1b09428a1110dc8c6d6a02e5	d__Eukaryota; k__Animalia	0.8811093081852243
+e870a474a17aabe9926e796bbb661f5c	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca; o__Peracarida; f__Peracarida; g__Peracarida	0.9999999948284609
+daaee4e60513fc0ce082e50b6a763d89	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida; s__Lepidonotus_sublevis	0.9691078980672708
+bff990bb1006dca1f0d7ade89a6e068e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9999436732215495
+ade4cc5c985ef2320bf98ad1815610b5	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachymedusae; f__Trachymedusae; g__Trachymedusae; s__Pantachogon_haeckeli	0.9785394894431698
+3efbe8151a949c3991e7b36a737fbc28	d__Eukaryota; k__Animalia; p__Arthropoda	0.8194957411430599
+850d1d20a40533a03a4559a25271592e	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Pandea_sp.	0.9868146660960592
+945efb6cab79d06e367870c4f9bc676f	d__Eukaryota; k__Animalia; p__Chaetognatha; c__Sagittoidea; o__Aphragmophora; f__Aphragmophora; g__Aphragmophora; s__Decipisagitta_decipiens	0.8581313235091679
+25c2c45fbfea7f5f20ce13e29f3fcb3e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca; o__Eucarida; f__Eucarida; g__Eucarida; s__Acanthephyra_purpurea	0.9997473712109128
+38c00d60a67aa1296450004e88ce2390	d__Eukaryota	0.9999981464772277
+0c5cae15a5000f232d20fd9ea3de7c7c	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9476908315370325
+065b9a1255a03f844103dab0be73df65	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachylinae; f__Trachylinae; g__Trachylinae; s__uncultured_eukaryote	0.999914115285183
+a3f5e8a66e435967c05fc87214c4d115	d__Eukaryota; k__Animalia	0.8594142389374606
+1ffd88385fad412e59b0e4b239eda220	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa	0.9998231419480714
+477ec306913685fbaab08f35c258eeeb	d__Eukaryota; k__Animalia; p__Ctenophora	0.9192887556632026
+4d6d4626a5fcbe25e15e18860f7bbbef	d__Eukaryota; k__Animalia; p__Tunicata; c__Thaliacea; o__Salpida; f__Salpida; g__Salpida; s__Salpa_thompsoni	0.8080759076135997
+25d3d9e23d6e043fb3d154de3fd63003	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii	0.9364205064062171
+ed58102afaa0952ccb2a2cb2852e6439	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.9390910265122961
+93e2886efc6558942294a2710cf2248f	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9846328974408027
+79d5d93fab96067284a2287b9af83c0e	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.8940527862922052
+951dabf0d617a1f5815fa4aac7ae642d	d__Eukaryota; k__Animalia	0.9865709263932688
+827c82491c397fd4e0c26458cc0be1ba	d__Eukaryota; k__Animalia	0.997802360881054
+32a8dec8fa435d43d4ed7ce1743bce8b	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachymedusae; f__Trachymedusae; g__Trachymedusae; s__Ptychogastria_polaris	0.9999973874307266
+6f844bc3ac7d088a9bf778326eaf95aa	d__Archaea; k__Archaea; p__Crenarchaeota; c__Nitrososphaeria; o__Nitrosopumilales; f__Nitrosopumilaceae; g__Nitrosopumilaceae	0.9999999883306325
+34fb7b0b1a9076e6737ae368be869397	d__Eukaryota; k__Animalia	0.9847615386666648
+baae7bd9670072d33eafb4c1ddf88bf2	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.9831560473264954
+6f09b8628f2ce6def877659c683126a8	d__Eukaryota; k__Animalia	0.8660332327945623
+0713b452baa1c1e61ab9b5af630b4673	d__Eukaryota; k__Animalia; p__Vertebrata; c__Mammalia; o__Mammalia; f__Mammalia; g__Mammalia; s__Gorilla_gorilla	0.9501563674973152
+20dd7f0c6b1baae8509dae53269d0945	d__Eukaryota; k__Animalia	0.9999999463437503
+aa83a78270dfaaae4b2725e41a1e25d3	d__Eukaryota	0.999987576180898
+8c9b903eb46cb590ca0ff985fc33cf74	d__Eukaryota; k__Animalia	0.9888315686078931
+17c6403d246da69a72a02df4054d1ab3	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9535020862443476
+a294bcff5a21be467e541d3c7f881d05	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii	0.9192271865936558
+9762dcf200543bcf2455b3be536fdd10	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.923655357741565
+ad8bf751583f5973a8e4965d34800460	d__Eukaryota; k__Animalia; p__Vertebrata; c__Mammalia; o__Mammalia; f__Mammalia; g__Mammalia	0.9999996114677937
+e0ae449711862248059490633d2d5f63	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Tetraplatia_volitans	0.9999999744248104
+84d4a633acc170217ac71ccf5f6be3c7	d__Eukaryota; k__Animalia; p__Chaetognatha; c__Sagittoidea; o__Phragmophora; f__Phragmophora; g__Phragmophora; s__Eukrohnia_fowleri	0.9851162798730528
+3354f5ccc36ead299cb2d7522553b3bb	d__Eukaryota; k__Animalia; p__Mollusca; c__Gastropoda; o__Heterobranchia; f__Heterobranchia; g__Heterobranchia	0.9999999999732244
+e242cd9939d0e7b163c22e0ac41baf9d	d__Eukaryota; k__Animalia; p__Ctenophora; c__Tentaculata	0.8015576636309544
+8073a3614e37e6d73408f137b101201b	d__Eukaryota; k__Animalia	0.8570114283641833
+e1a18ef22f4ff54f667afd9df3ea4389	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9731667358329024
+5d9d318487d9efaafa7725500873769f	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9411064088205562
+c7d87419132b0eadc96f5a05f75d5fb1	d__Eukaryota; k__Animalia; p__Nemertea; c__Anopla; o__Heteronemertea; f__Heteronemertea; g__Heteronemertea	0.9990614870208714
+55f702752f34d0c7f1456b664dda2095	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.98371745826838
+3cefd8336ea014e8e747dbd6ef13ebdc	d__Eukaryota; k__Animalia; p__Ctenophora	0.9951181882567944
+7ee243bc100148d08479b247e1722aa1	d__Eukaryota; k__Animalia	0.9999993935575263
+801d20a5bd4c0f8ddd45ae129842b0bc	d__Eukaryota; k__Animalia; p__Arthropoda	0.9843382861616276
+f45b552c61bf6f5814ec62e9bd65bbad	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachymedusae; f__Trachymedusae; g__Trachymedusae; s__Pantachogon_haeckeli	0.9999999126559554
+970ba7424ee5c6886ad6f3c00f901d2d	d__Eukaryota	0.999999940886546
+80469602c24d775daaa0c7d7176aa5d8	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.8008268026846921
+ab6b5745d3a1ad4821f49f4461eec1e8	d__Eukaryota; k__Animalia; p__Cnidaria	0.8762040971335966
+b48d0f7d0116ab94b705e16733539bfa	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Sessilia; f__Sessilia; g__Sessilia	0.8060143736396821
+bb4221cb366ab3569fed859a6d9785d0	d__Eukaryota; k__Animalia; p__Chaetognatha; c__Sagittoidea; o__Aphragmophora; f__Aphragmophora; g__Aphragmophora	0.9999989790936555
+0159ee7a4ae8542b084318717d36527a	d__Eukaryota; k__Animalia	0.8620240821458528
+39995029eb6e966abe44cece0a3c46b7	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.8986094157341307
+142014d4d801c9c7604590a3bba4610a	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida	0.9168825110025108
+fe45f49e4b2929a1ad17276afa97cfe7	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9953896823954616
+96b7c8838e22ef7c937edbcd4357eb60	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Cyclopoida; f__Cyclopoida; g__Cyclopoida; s__uncultured_eukaryote	0.9993274988231285
+7fad3abb93c7c3f49d20df7aafba499c	d__Eukaryota; k__Animalia	0.9641941168347565
+509939fa3d47056eea643fb30258e9ef	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.8506366418567055
+d2f64c40186993fb8d0bc0ac95d27640	d__Eukaryota; k__Animalia; p__Ctenophora; c__Tentaculata; o__Cydippida; f__Cydippida; g__Cydippida; s__Pleurobrachia_bachei	0.8637580960216386
+77976d510ff7975c4473553565a8f7d0	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__uncultured_eukaryote	0.9964385417333984
+b8340222969eb765dbf2e38ae11213d6	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9822950420548063
+4e2731a62a35124d3fc884a049eb4fad	d__Eukaryota; k__Animalia	0.8022799389190193
+aef2089e7465ccf18cb28177369491d9	d__Eukaryota	0.9999999995198781
+8076eb165d45eb3b0935cd0e77453369	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Eunicida; f__Eunicida; g__Eunicida	0.999911826182236
+258d14ca3547f08ac2de380089eb36b6	d__Eukaryota; k__Animalia	0.9816393588820576
+819774ce83d481c96733ddfe2bc6f95f	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida	0.9271780494768814
+23b900b3953842501dcd26a17ee11def	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__Sinocalanus_sinensis	0.9931229544019448
+d216a30386682668a3dea278323e9fab	d__Eukaryota; k__Animalia	0.8700410265546895
+99623b32f88c7897c56f5fc24836e873	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.936517234032775
+7dca4c746e7e8d617919fc565a7a88a5	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae	0.9557990895290289
+662e16432a806436df2f9ee5db1a9766	d__Eukaryota; k__Animalia	0.8059352900614755
+66fd0bc24ab5bfdac487761952d95eec	d__Eukaryota; k__Animalia; p__Ctenophora	0.999996472641269
+f0267c2558fe429a686317f1142d945b	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.965697447746725
+552b0e9e5946d6d10cbf151206b095e2	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9742453396077545
+547ad36376fa8a9118c08be553cdbb38	d__Eukaryota; k__Animalia; p__Arthropoda	0.9188473011258074
+b7d65ae7bdb12816179f3ba5394d9f30	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9801250069351626
+596f7aee4d438c15dce09e043c8a573f	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.8858401937461786
+2b02e38910b6f6bc8426f01f81026fd6	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Solmissus_marshalli	0.9999964473732358
+d48429d4b57908d789c7c265eb760531	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Spionida; f__Spionida; g__Spionida; s__Caulleriella_parva	0.9992347408902014
+ea889d8d91959f9dee0280046d1af6bc	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9595504899880527
+8cefb0793aa08ccbadff280d8ff9702b	d__Eukaryota; k__Animalia	0.8120916352727824
+fe5a4933a03fcdb6fbabcb6d9f64ceab	d__Eukaryota; k__Animalia; p__Ctenophora	0.9160553214851487
+b213fccbe9f2faf2b6926e91b8d3c7f2	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca; o__Peracarida; f__Peracarida; g__Peracarida	0.8739645513791675
+b4d58593b11c64ae0af4dc679332e050	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida; s__Lepidonotus_sublevis	0.984870410334935
+ff2b0b15022ebec5cd384ca608e7af9a	d__Eukaryota; k__Animalia; p__Ctenophora; c__Tentaculata; o__Platyctenida; f__Platyctenida; g__Platyctenida; s__Coeloplana_agniae	0.9603181436484315
+839b399b80c59cc422a872b3a4b244af	d__Eukaryota; k__Animalia	0.9052586221814893
+53b5ac249e46b30c6c1cd20c5c9d0c3a	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Spionida; f__Spionida; g__Spionida; s__Caulleriella_parva	0.9995447340470843
+2d9d0e2b1eaa53da5b42fbee106cfa6a	d__Eukaryota; k__Animalia	0.938100683592108
+ffeb4a800b3c0c5286338851ddcd11fb	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.8165449105430425
+408a1c7f1258d869efc36afc7ce2619b	d__Eukaryota; k__Animalia; p__Cnidaria	0.9868776129998666
+bbf3d7615dc4ba04cc4f1415d1816c34	d__Eukaryota; k__Animalia; p__Arthropoda	0.8134506072820521
+04561f6cb9bad443e5da1ebdd204396f	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_eukaryote	0.9906038935429752
+48ea1e202943d309fefbeb07acbbc184	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa	0.9536213590157606
+41821f740463582191622fd9da618488	d__Eukaryota	0.999172921041449
+354b247842baac121801e1fe8173dc5a	d__Eukaryota; k__Animalia; p__Vertebrata; c__Mammalia; o__Mammalia; f__Mammalia; g__Mammalia	0.9999996215312373
+5953181a986e7ed231469df9d4633d5b	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9577228892201136
+7c01801522e1e4fa3b2017896566767a	d__Eukaryota	0.9999985039622186
+8c2e3204648abe2016dae377784281f4	d__Eukaryota	0.9999984209017705
+e7d96b2fe3355e51fb2048bf773d81fc	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9585534180575354
+844cfc7d440f7d7f34ee5acabb09a305	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9958474154446263
+79dac0c814b904825476b8404d05c9ae	d__Eukaryota; k__Animalia	0.837116302172673
+a0ffca0fdbbab8c5caecafa98574ec4c	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida	0.9999194527609719
+95a3b1670d28cb147b6f437f1a2e679d	d__Eukaryota; k__Animalia; p__Cnidaria	0.9479017811012341
+850ba3b68f19ef416317378f251a795a	d__Eukaryota	0.9999989074051528
+2cfa20e53f6a9bcd3df6c694c06f83e4	d__Eukaryota; k__Animalia; p__Mollusca; c__Cephalopoda	0.9999999951947443
+93d95da51b2e277e33120ffcfc1183db	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae	0.981840236378859
+0236c2517284a825cdd3c1a6e7007184	d__Eukaryota; k__Animalia; p__Rotifera; c__Monogononta; o__Ploimida; f__Ploimida; g__Ploimida; s__Synchaeta_tremula	0.9866418307682489
+66c3d94a4f5627e3aeb9e3ecf9f08fd8	d__Eukaryota; k__Animalia; p__Cnidaria; c__Anthozoa; o__Actiniaria; f__Actiniaria; g__Actiniaria	0.9999966806916137
+8f251ebcef57ed89dc5360699bad812b	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.8549720608401752
+1e8bab0ad004f6372b3f32b819daf3b9	d__Eukaryota; k__Animalia	0.8914671142909206
+2662b39befc48fed4e530e9edcb3461f	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Eunicida; f__Eunicida; g__Eunicida	0.9984499322338823
+a90c97c8b7e676f5024e9e4e15eeacfa	d__Eukaryota; k__Animalia	0.9227766260533183
+d11f10e603efa63904e7759e6e90ef4e	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.9056698279315595
+b5e065ef3993d53639528f1038fa2f07	d__Eukaryota; k__Animalia; p__Ctenophora; c__Tentaculata	0.9197545420486596
+ef14c6bb9ae3c1170e45b29849ea509d	d__Eukaryota; k__Animalia	0.8533770673820867
+d61a6e8a193a16d5dc7558838fc8d745	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9897051797220051
+d1bea6bbd9d86f7878e918403a8bc362	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.8869731439669816
+95d33bfda15b8d47e21bb793fe3be20f	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei; s__Pleuronichthys_cornutus	0.8988380634385119
+e312365ba46a2bed71c13a21d60c6650	d__Eukaryota; k__Animalia	0.824095014289121
+21c0a245c39c8fe1664205214cfaf73f	d__Eukaryota; k__Animalia; p__Ctenophora	0.887460654911585
+263ccd946188524c61bd9829637ce63c	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__Junceella_aquamata	0.9935245236541199
+56ffe703948efeaf9a646350cac26921	d__Eukaryota; k__Animalia; p__Mollusca; c__Cephalopoda	0.9999999991659524
+479e4f12e0febb9f8394be40c9cb1858	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.803999025846164
+2894d71463407f3bbd2023e30f9f7440	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa	0.9998299045082112
+99e44c90fc18eaf5099b20da2c51fe69	d__Eukaryota; k__Animalia	0.8357976554646104
+d159f1f43dce62bd72d8883079620f7d	d__Eukaryota; k__Animalia; p__Arthropoda	0.8606983498578982
+eb516fcc88bc15f27389528f7e23623c	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.9018064240657153
+47240dc47352abaa4d9fa2a1fa5b85c7	d__Eukaryota; k__Animalia; p__Arthropoda	0.838174996711723
+91aaf2719c05daf4626eab98413e8bcf	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9263218256005485
+29a6966a44f537a50e24fc3882f557d6	d__Eukaryota; k__Animalia; p__Echinodermata; c__Holothuroidea; o__Holothuroidea; f__Holothuroidea; g__Holothuroidea	0.9999999706631864
+ace7c5e6b71c59f935379c2f7874d3f4	d__Eukaryota; k__Animalia; p__Ctenophora	0.9921699476019665
+b2e1344282e3aa0768cd6ff1099280a5	d__Eukaryota; k__Animalia; p__Chaetognatha; c__Sagittoidea; o__Aphragmophora; f__Aphragmophora; g__Aphragmophora	0.9999797025919462
+c17c6378965bacfcfa51a01a7e37a446	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Eunicida; f__Eunicida; g__Eunicida	0.9998965492140255
+7d9c734584ef84b33213c3bb17ef24e7	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii	0.9027232403216042
+9969d9d2bf07cfbccfd30e150f9781a4	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.9475839641861453
+30289dfd957b72ed86b02f6ce05d033a	d__Eukaryota; k__Animalia	0.8994153593332597
+2ad48c84410b8053364fdea5cc59fd5b	d__Eukaryota; k__Animalia; p__Arthropoda	0.8181080517199677
+627383f59d76e0c3252775dafe5e4cf4	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.8168408203623476
+ea749ae271b3cad7b4da02c4af1e5811	d__Eukaryota; k__Animalia; p__Tunicata; c__Thaliacea; o__Salpida; f__Salpida; g__Salpida	0.8014496388157591
+269ed69c665976b78f31e4ccaa7887ab	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Phyllodocida; f__Phyllodocida; g__Phyllodocida	0.9979361819745542
+b840401829b3afec1b43ec34fcb4a120	d__Eukaryota	0.999899376309469
+5a50e8c2605a315795e2230764883416	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachylinae; f__Trachylinae; g__Trachylinae; s__uncultured_eukaryote	0.9916202073614557
+75587b85dbaaf4e104eb09260dc13c8b	d__Eukaryota	0.9999999630347653
+a3c0dfb104f5583d80e4712cbd17d202	d__Eukaryota; k__Animalia	0.9898550961164578
+d5c2d5525c15b03f910a74605fcb2e7f	d__Eukaryota; k__Animalia; p__Echinodermata; c__Holothuroidea; o__Holothuroidea; f__Holothuroidea; g__Holothuroidea	0.9999999654882346
+b6777303517dfe2ba1fe2e63cda3bf82	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Corymorpha_bigelowi	0.9457399871424118
+37681cefb6cb1043d823d1c73335a438	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Capitellida; f__Capitellida; g__Capitellida; s__Heteromastus_filiformis	0.999591122701388
+817dd273a5e9e851b7c6b5e600a228ce	d__Eukaryota; k__Animalia	0.8241162345434445
+04d33681c97cbbba4703a46b090876a9	d__Eukaryota; k__Animalia; p__Arthropoda; c__Insecta; o__Diptera; f__Diptera; g__Diptera; s__Drosophila_virilis	0.871524339586351
+b4150558b269c64c85a5c79805ea4678	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.867390594506935
+819de454e9830e2445f0eae60a1a2246	d__Eukaryota	0.9999991678171939
+5081a2333021c38dbd6b8334bdcff438	d__Eukaryota; k__Animalia; p__Arthropoda	0.9871387323814768
+9a570ed1394f05bcfdecf88a674e206c	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida	0.9680539697850058
+e8e8b19541a0093a28a2a699a75e7b48	d__Eukaryota; k__Animalia; p__Rotifera; c__Monogononta; o__Ploimida; f__Ploimida; g__Ploimida	0.9276106428947479
+36376dee943da70d888697d3865a7d3a	d__Eukaryota; k__Animalia	0.9263979582229931
+696469e68497b8e58b523edf8b4a3581	d__Eukaryota	0.999999999902685
+03a9d9338eef1b468f7fae2839409d0e	d__Eukaryota; k__Animalia	0.8268180696120578
+3c937a230a559e1f536a839145ad508d	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.9066483792508176
+5f639bd5d231c5837dcf2965d833c1d7	d__Eukaryota; k__Animalia; p__Ctenophora	0.9245296605036609
+0c60291287ad7e51176eb6f07db0fe57	d__Eukaryota; k__Animalia; p__Hemichordata; c__Enteropneusta; o__Enteropneusta; f__Harrimaniidae; g__Harrimaniidae	0.9999379700561423
+fb1d16e15669df399db2dfd6c0559270	d__Eukaryota	0.9999999988513244
+36707929214c65cca52e871b3f9269f7	d__Eukaryota	0.9999988328796381
+1fcc76cbd7bff9a6dd69e70490f8ac99	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Opheliidae; f__Opheliidae; g__Opheliidae; s__Ophelina_acuminata	0.9313257968763153
+0094a0291a7965827b291d5e4c08b740	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Pandea_sp.	0.9984653112933254
+ff12ca99c3639ec43d9a2712570738d3	d__Eukaryota; k__Animalia; p__Arthropoda	0.8179110457918757
+22a3b60f2c0adf41c5c26e5b30bcfb09	d__Eukaryota; k__Animalia	0.9059957029690362
+4e821be00c97b65a13d69aab47a3a49a	d__Eukaryota; k__Animalia; p__Ctenophora	0.9298793670584302
+bf2d290cbc1cfcdb67a77f76b39d2e77	d__Eukaryota; k__Animalia	0.8376497656114509
+65bfeb8b0ae54c50fb7f7153a7e4e895	d__Eukaryota; k__Animalia; p__Cnidaria	0.9561726734806408
+8178964103e0e9ba4255358e5aa144ad	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9975651140795653
+9411885d33323eb3c19b657aa3996863	d__Eukaryota; k__Animalia	0.9274752147034259
+0325559a25c3e9ecd6a3aa47d5f2a5ae	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Semaeostomeae; f__Semaeostomeae; g__Semaeostomeae; s__Phacellophora_camtschatica	0.9999999282722767
+1d53866c9f0399114eca19cff52dc3ab	d__Eukaryota; k__Animalia	0.891147549550379
+16b73a187f92d06a0083c3d6d1585618	d__Eukaryota; k__Animalia	0.9958799875414959
+c6aa5e6b7f6ea8ef63ecc8b61ac93394	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Spionida; f__Spionida; g__Spionida; s__Caulleriella_parva	0.9602044911066153
+47d3941b8cd8332cff4561f2fea49276	d__Eukaryota; k__Animalia	0.8458658078653588
+c926f2f006ec896b905bddb781bcf12c	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Solmissus_marshalli	0.9999825709121409
+c9b4d6f36ee105755764e820ebb83b5b	d__Eukaryota	0.9999999995032801
+aff86341e9a1c6a6468f411bec09fe67	d__Eukaryota; k__Animalia; p__Arthropoda; c__Insecta	0.813985872930393
+43249c718989fa9d7ede91f6c6c36579	d__Eukaryota	0.9999999999749889
+3ab387610552e032392935bbe6a83fb2	d__Eukaryota; k__Holozoa; p__Porifera; c__Demospongiae; o__Spongillida; f__Spongillida; g__Spongillida; s__Baikalospongia_bacillifera	0.9844553444102765
+f925802063498537ec4781bbe7a30518	d__Eukaryota; k__Animalia	0.9766935168640859
+a3fc6d990259c29f46e6fedf4c191cfd	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Semaeostomeae; f__Semaeostomeae; g__Semaeostomeae; s__Aurelia_sp.	0.9462753639686216
+1d02cdda1fd919a1733738fb3bf190fe	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachymedusae; f__Trachymedusae; g__Trachymedusae; s__Ptychogastria_polaris	0.9940097315892837
+9d8a12d500bf2da0fc70558372c48a67	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.8611046837076165
+34b1241de0ac20359e0e521d41422303	d__Eukaryota; k__Animalia	0.9264974212197847
+3e1ce04e9cccf218bcc69302be79770d	d__Eukaryota; k__Animalia	0.9872897993213687
+625104c78a4cc6ca9d7deac2713c78d1	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.9347244171744046
+255292bc936a67b06dbf0c9c74557b3f	d__Eukaryota; k__Animalia	0.83503730470118
+2bfe6a496241114194798cf7a3ecd9db	d__Eukaryota	0.9999999890713587
+91e9196a65b9c9b5987978ffc0bf7416	d__Eukaryota; k__Animalia; p__Mollusca; c__Cephalopoda	0.9999999848297803
+c5cf062f1e3b23994e5d582c813a8beb	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.8827853563932814
+814800e725a95d892a9069e4112dde09	d__Eukaryota; k__Animalia; p__Vertebrata; c__Mammalia; o__Mammalia; f__Mammalia; g__Mammalia	0.9595606440617808
+75dd60faa71c147cab0b13ed77335c81	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9999999193988831
+7eadedc958905fffe4adf15365f84207	d__Eukaryota; k__Animalia	0.8766802234865227
+7c5b3807905936da4a7300448c412af6	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Semaeostomeae; f__Semaeostomeae; g__Semaeostomeae; s__Phacellophora_camtschatica	0.9999999973233004
+8c65a274fb8f0969075b5cd3234caf08	d__Eukaryota; k__Animalia; p__Arthropoda	0.8342215080604337
+a487f88dc244cd32c5138b4798b820c4	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.9365660434667136
+d0fde570aa429db35ab5aa9dafcae17f	d__Eukaryota; k__Animalia	0.9442076716597507
+bcfe12a84a5829735ac1156b0da4d8cd	d__Eukaryota; k__Animalia; p__Tunicata; c__Appendicularia; o__Copelata; f__Oikopleuridae; g__Oikopleuridae; s__uncultured_metazoan	0.9396341681927005
+06caff9aadbbdaf775f31df05576a748	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca; o__Eucarida; f__Eucarida; g__Eucarida; s__Acanthephyra_purpurea	0.9997180145780616
+bd47b7123d632cde6818090eb8e30a1c	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Coryne_nipponica	0.9993498968711173
+833cff7e89a07c41a879e355358e2510	d__Eukaryota; k__Animalia; p__Echinodermata; c__Holothuroidea; o__Holothuroidea; f__Holothuroidea; g__Holothuroidea; s__Peniagone_sp.	0.9930318923342554
+2ebf5d079a9f108d9e4a910932e0a465	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Sabellida; f__Sabellida; g__Sabellida; s__Sabella_spallanzanii	0.8127679629833051
+bcc4ef2a5feb7efa7ce56f3cb8d97bcc	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Leptothecata; f__Leptothecata; g__Leptothecata	0.9580494415712928
+301c9c74fda56913ebc500daf8606d44	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Spionida; f__Spionida; g__Spionida	0.9412417745217592
+d691759c21a2c66a8869cb85ecbd26c3	d__Eukaryota; k__Animalia; p__Arthropoda; c__Arachnida; o__Acari; f__Acari; g__Acari	0.9999998525245566
+56c4a8dbf5bafcad26ed8d6bc12991f1	d__Eukaryota; k__Animalia; p__Rotifera; c__Monogononta; o__Ploimida; f__Ploimida; g__Ploimida; s__Synchaeta_tremula	0.986228704952714
+24b90b38d5d69546aa70f4f0bb0f09ca	d__Eukaryota; k__Animalia	0.8254969277040678
+0c1439eaa27254e7c9b4cd3c80ab328f	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ellipura; o__Collembola; f__Collembola; g__Collembola	0.9997536071510842
+59e1a64552c1040606034a2f7a319552	d__Eukaryota; k__Animalia; p__Arthropoda	0.8459929019825695
+0723d861953f2dea8cbf80a801447033	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Narcomedusae; f__Narcomedusae; g__Narcomedusae; s__Cunina_frugifera	0.9999995628173896
+945189f9aa1fc5330d122c877d9f91a3	d__Eukaryota; k__Animalia	0.8830899071979452
+bda3e52c6eeca2c43e61beada29232c3	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata	0.9952238167046866
+982c72390709eb1cf044cd026146b267	d__Eukaryota	0.9999999999530105
+d2b9bdab46a9cbf1321c75fbe8f1de01	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Hybocodon_chilensis	0.8648806848349548
+85946a9914ab038f9270e29197bed817	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.8331144398883236
+f75299050afeb9c9d6a02e3c8c15df11	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Sessilia; f__Sessilia; g__Sessilia	0.8529583437895677
+10760cc736ab318e28145e46eff2ad6c	d__Eukaryota; k__Animalia	0.8080748007043922
+bbadf55d5a258e93ca7320d272d69d99	d__Eukaryota; k__Animalia	0.8334886727764196
+d478534d00dbe84799faa3954d70a266	d__Eukaryota	0.9999999994479096
+4171d999c79fd45b6a8517942e0a5b60	d__Eukaryota; k__Animalia; p__Tunicata; c__Thaliacea; o__Salpida; f__Salpida; g__Salpida; s__Soestia_zonaria	0.9999998639021705
+13113ca1e2ed908df4acab9a0fb86e7b	d__Eukaryota	0.9999998312642934
+a7d0df933634297066ecbfd794a57d93	d__Eukaryota; k__Animalia	0.9100325395774206
+9b46a32c53825f93354c8306ff33cdf7	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca	0.9625214241009052
+a79cf44004c07e31025db281fa912a43	d__Eukaryota	0.9999768282676418
+ed45519396896c75f126fcd12c17195c	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Semaeostomeae; f__Semaeostomeae; g__Semaeostomeae; s__Cyanea_sp.	0.9999796010005482
+4d5478dabaf6357d974b77a9dd592985	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachylinae; f__Trachylinae; g__Trachylinae; s__Liriope_tetraphylla	0.9999787006031955
+f22a78542747de9e9fdf446a92e22d4b	d__Eukaryota; k__Animalia	0.8397161626486687
+19edcd29807df8527683b2bdd0dedcc7	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Trachylinae; f__Trachylinae; g__Trachylinae; s__Crossota_rufobrunnea	0.9999884535392431
+b027ff7aa5192700adc15e96e4616412	d__Eukaryota; k__Animalia; p__Mollusca; c__Bivalvia; o__Veneroida; f__Veneroida; g__Veneroida; s__Phaxas_pellucidus	0.9999374325926925
+3adc5eaeb439fcb3db544ee571e9d4db	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Harpacticoida; f__Harpacticoida; g__Harpacticoida	0.9014531860242053
+ae7c574405aebc9001afe22cddb8d7d3	d__Eukaryota; k__Animalia; p__Cnidaria; c__Anthozoa; o__Ceriantharia; f__Ceriantharia; g__Ceriantharia; s__Pachycerianthus_fimbriatus	0.9994892039988017
+82da14cb4839d25f8e27581804ef7b52	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei; s__Salmo_salar	0.9971589802864096
+517a2697e3989728f4582a6ab820aa66	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9052206143841379
+b94c722169f623ba4214fa9159c00b9b	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__uncultured_eukaryote	0.8356401329170694
+df78500a58fde0032b60db5119ab52e2	d__Eukaryota	0.9999999999142968
+98fdc3aef8f2a8feb08c5902139d8a6a	d__Eukaryota; k__Animalia; p__Rotifera; c__Monogononta; o__Ploimida; f__Ploimida; g__Ploimida	0.9898133366110393
+8b86b16cb164b9f1c4bc3a3abc663ea1	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Semaeostomeae; f__Semaeostomeae; g__Semaeostomeae; s__Phacellophora_camtschatica	0.9999999042297436
+eb07cc6041eccbf33afab16b4fb88868	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta	0.9626708249749898
+4a0ae16b68a320e4c4b9d2db753d535c	d__Eukaryota; k__Animalia; p__Cnidaria; c__Scyphozoa; o__Semaeostomeae; f__Semaeostomeae; g__Semaeostomeae; s__Aurelia_sp.	0.8327067918761925
+22516654dae7faa3e5a07d43a59ffb7d	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae	0.8064095163072675
+1dc7411b5f3392050a7b57ff7236e65f	d__Eukaryota; k__Animalia; p__Annelida; c__Clitellata; o__Haplotaxida; f__Haplotaxida; g__Haplotaxida; s__Stylaria_sp.	0.9672326762528604
+e1061ed313059c8648dba40e7d38a207	d__Eukaryota; k__Animalia; p__Vertebrata	0.9981439874094852
+7d5d59b5c61d890cc871a861a14d2655	d__Eukaryota; k__Animalia; p__Arthropoda; c__Branchiopoda; o__Diplostraca; f__Diplostraca; g__Diplostraca	0.9999990175495764
+d71b690a4b539c6a65198b174fbe1747	d__Eukaryota; k__Animalia	0.9248158262928874
+5bc9a1150e692d94a3dec211c0aae651	d__Eukaryota; k__Animalia	0.9157006613800334
+4a52f7893c2005516e943bee9ed3f793	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca; o__Peracarida; f__Peracarida; g__Peracarida	0.8401712701919903
+31b014002f0d0ee6153c9220e0e443d8	d__Eukaryota	0.9994384398860829
+26dcabd2661f9fa4855fede13080d90c	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Leptothecata; f__Leptothecata; g__Leptothecata; s__Rhacostoma_atlanticum	0.9680321331121651
+6451809c5516eb6feb15284745af7a62	d__Eukaryota; k__Animalia; p__Rotifera; c__Monogononta; o__Ploimida; f__Ploimida; g__Ploimida; s__Synchaeta_tremula	0.9795416550730122
+1d729eb9b6258619695bb2d23b617564	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida	0.99999936000404
+7c539adf586fc4bbd690bdd35f87e023	d__Eukaryota	0.9999999922407043
+1d21be26c3eeb47e34c9471abd5f8aa8	d__Eukaryota; k__Animalia; p__Platyhelminthes; c__Trematoda	0.8599316190806409
+32714143bfde3ea36d10d6b3ee74c535	d__Eukaryota; k__Animalia; p__Rotifera; c__Bdelloidea; o__Adinetida; f__Adinetida; g__Adinetida	0.9915817492233803
+c99d7b8e9a45682e3040febaaf46fadb	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__Conchoecia_sp.	0.9820045858850059
+9ca5cfba2789cf34abd4a5ccbf5f778c	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.960659801141198
+09df105230b1c95b6f942692501f2036	d__Eukaryota	0.9999999993822939
+f83f115a8278f92bbbba178ed3c2af54	d__Eukaryota; k__Animalia	0.8976772437136807
+7fe39b56b715f16e2df3e0c7f0aec901	d__Eukaryota; k__Animalia	0.9999883394815132
+500f4198862a145397ef700583fd575e	d__Eukaryota; k__Animalia	0.9999999999959278
+f83d44e5aa2b6baf70fead9112fdde02	d__Eukaryota; k__Animalia; p__Arthropoda	0.8260772528632414
+9d38fcc759159c909c4723cff9707d07	d__Eukaryota	0.9999968721463127
+700d6f9534fe58837576ac2cf69e9904	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Capitellida; f__Capitellida; g__Capitellida; s__Notomastus_latericeus	0.9960338950274434
+6d9212acf52ae2d75701cf5828e01859	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__hydrothermal_vent	0.9175715717588254
+469dd9065daf1343af01d7fc246ff3ed	d__Eukaryota; k__Animalia; p__Arthropoda; c__Insecta; o__Diptera; f__Diptera; g__Diptera; s__Simulium_sanctipauli	0.8155687427411424
+98d5c459fb5029e00de0065f06f74d6b	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Poecilostomatoida; f__Poecilostomatoida; g__Poecilostomatoida; s__Sapphirina_darwinii	0.9856932127367062
+714a6b727770c666fcd0592df68b7cdf	d__Eukaryota	0.9999999999885059
+4c0fa4fd5c1c6606ffa8be0ab9ddddcb	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Poecilostomatoida; f__Poecilostomatoida; g__Poecilostomatoida; s__Sapphirina_darwinii	0.9713287003134724
+f66ce098f82639af4a8584a33e48c97c	d__Eukaryota	0.9999999982839288
+a8585e190ceb322dd4f6d929aa859a72	d__Eukaryota; k__Animalia	0.9928698931677081
+670045dc7c3d1e924085f1c2cfe360e5	d__Eukaryota; k__Animalia	0.8275814495814459
+10407a74319f0767aaa8bf38d6d2169c	d__Eukaryota; k__Animalia; p__Mollusca; c__Bivalvia; o__Pectinoida; f__Pectinoida; g__Pectinoida; s__Placopecten_magellanicus	0.9994742661135476
+b236f0679c4db01c2dfa6e280571d32c	d__Eukaryota; k__Animalia	0.8721573674426415
+d36a03310958a7b4daaee16b2830de9a	d__Eukaryota; k__Animalia; p__Arthropoda	0.8968967399093402
+38fce79569bd3f104b4a5319652b7359	d__Eukaryota; k__Animalia; p__Vertebrata; c__Actinopterygii; o__Teleostei; f__Teleostei; g__Teleostei	0.9286501716544103
+05efbb4c9293267db42180fcbe378ffb	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.8188995534568484
+111ce9c2ad375dc774d130efd5173029	d__Eukaryota	0.9999993301647878
+c6bed5e99299b71dba1e43e70199c069	d__Eukaryota; k__Animalia; p__Arthropoda; c__Ostracoda; o__Halocyprida; f__Halocyprida; g__Halocyprida; s__marine_metagenome	0.9975942264058784
+6da9abe4cca1d2d5dcc7a199aa4f2903	d__Eukaryota; k__Animalia; p__Echinodermata; c__Holothuroidea; o__Holothuroidea; f__Holothuroidea; g__Holothuroidea	0.9999999653565492
+6c6e7816d9b5b36cab89614475eb6cdc	d__Eukaryota; k__Animalia; p__Tunicata; c__Thaliacea; o__Salpida; f__Salpida; g__Salpida; s__Salpa_thompsoni	0.9992204972712398
+f0e4129d8b6d62460c1c94186543d700	d__Eukaryota	0.9999995448891941
+b1be9828371c9512bd03b4a837aabcdf	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.87118344196195
+2045d75eb7d6b36dd611f6cabbda22d5	d__Eukaryota	0.9999851733746133
+9e6b7c53bebe8fc11d5c4b98368fdc8a	d__Eukaryota; k__Animalia	0.9643292236581675
+8cc8d8f95f18c6c069f83e8cb9edc4af	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida	0.8227391220482125
+158868490d319d182a1197b7fb081095	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.8386885269784414
+30079567906c07853346e8de617ea657	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.8629080591430026
+0b0c6436cc727a137c8c1bdfb65d6d52	d__Eukaryota; k__Animalia; p__uncultured; c__uncultured; o__uncultured; f__uncultured; g__uncultured; s__uncultured_eukaryote	0.8651982002651765
+db6fa4ef714982f68697be833c73b8f1	d__Eukaryota	0.9999999999816015
+95638c1f6a67b84eb9807a2c9c9f6977	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Terebellida; f__Terebellida; g__Terebellida; s__Glyphanostomum_pallescens	0.9950354230856404
+2d8ef03e653454529b43311e977fdc6f	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda	0.9962339251461609
+fdbe1ca1c46d3eaee676c9c8197f416d	d__Eukaryota; k__Animalia; p__Annelida; c__Polychaeta; o__Eunicida; f__Eunicida; g__Eunicida	0.8716221425129157
+1fb85893812e56a0dd1cf46d231133d6	d__Eukaryota; k__Animalia; p__Nematozoa; c__Chromadorea; o__Monhysterida; f__Monhysterida; g__Monhysterida; s__Tridentulus_sp.	0.9967310742327677
+6bb916a46ddf8a170b2300091321e533	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Siphonophorae; f__Siphonophorae; g__Siphonophorae; s__uncultured_eukaryote	0.994404595250069
+aa5987756aa21f159f4ad1ac705a48f6	d__Eukaryota; k__Animalia; p__Bryozoa; c__Gymnolaemata; o__Cheilostomatida; f__Cheilostomatida; g__Cheilostomatida; s__Crisularia_plumosa	0.9983899804792589
+8595b23ef055a50982e703749b6913c3	d__Eukaryota	0.999982974476385
+10005be236319b6761bda55609224b7d	d__Eukaryota; k__Animalia	0.8394320366790657
+b860d1bc8f1c75384f31e9c74d2786fd	d__Eukaryota	0.9999998372776531
+e356af5d51432414a855cb068b77ee5a	d__Eukaryota	0.9999772554554061
+ab589fc957f5645655f4677dcb5302a6	d__Eukaryota; k__Animalia; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida	0.9281833990540489
+f5ce20a8f976a7e06a54f3b275248e30	d__Eukaryota; k__Animalia; p__Arthropoda; c__Malacostraca; o__Peracarida; f__Peracarida; g__Peracarida	0.9038638821962277
+ed2c254c18c08d4d18a1bac663a62864	d__Eukaryota; k__Animalia	0.8323982062861421
+1e0dc7434fa3fc74b2ff0578b8caf6c8	d__Eukaryota; k__Animalia; p__Arthropoda	0.8114607075186073
+54659e9d1080d7ed127129c40361f82a	d__Eukaryota	0.9993478331753958
+1f044422039912f25f7e4d72aedd36bd	d__Eukaryota; k__Animalia; p__Cnidaria; c__Anthozoa; o__Ceriantharia; f__Ceriantharia; g__Ceriantharia; s__Pachycerianthus_fimbriatus	0.9889423480781353
+278325f08a5eb0859560989f502ad58d	d__Eukaryota; k__Animalia; p__Arthropoda; c__Insecta; o__Diptera; f__Diptera; g__Diptera	0.9199248877426766
+b534d559c1cc11a0e7731a4c8634900e	d__Eukaryota; k__Animalia; p__Rotifera; c__Monogononta; o__Flosculariacea; f__Flosculariacea; g__Flosculariacea	0.9457428226836688
+070990e1d95d84eff6ad867e28492f2e	d__Eukaryota	0.9999999998835638
+58f251a0cac2508fdd97bc34bf7f484b	d__Eukaryota; k__Animalia; p__Cnidaria; c__Hydrozoa; o__Anthoathecata; f__Anthoathecata; g__Anthoathecata; s__Hybocodon_chilensis	0.8556384144727847
