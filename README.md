@@ -13,7 +13,7 @@ The diversity and interactions among mesopelagic organisms are difficult to stud
 Code and relevant input/output files: 
 
 1. 00_qiime2-outputs: QIIME 2 was used to process raw sequencing data. This directory includes output files from 18S and 12S metabarcoding and relevant metadata files for downstream analysis, e.g. decontamination. 
-2. 01_decontam: This directory includes R markdown files (.Rmd) with code for removing contaminant sequences or ASVs for 18S (protist and invertebrates are processed separatelY) and 12S (for vertebrates).
+2. 01_decontam: This directory includes R markdown files (.Rmd) with code for removing contaminant sequences or ASVs for 18S (protist and invertebrates are processed separately) and 12S (for vertebrates).
 3. 02_phyloseq: This includes the decontaminated phyloseq files from the decontam step that are used for diversity analyses and other analyses. 
 4. 03_diversity: This includes code and select input files to conduct the diversity analyses presented in the manuscript including rarefaction, alpha diversity, and beta diversity. 
 5. 04_network-analysis: This includes code and select input files for setting up inputs for network analysis using SPIEC-EASI (AR43_alleuk_setup_spieceasi_pub_final.Rmd) and code for evaluating the networks based on taxa (AR43_alleuk_spieceasi_overview_pub_final.Rmd) and positive/negative interactions (AR43_alleuk_spieceasi_interactions_pub_final.Rmd). 
