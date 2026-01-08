@@ -63,8 +63,7 @@ head(metadata)
 tail(metadata)
 metadata <- metadata %>% select(-c(duration))
 metadata$sample <- rownames(metadata)
-rownames(metadata)
-rownames(metadata) <- metadata$sample_id
+rownames(metadata) <- metadata$sample.id
 head(metadata)
 
 ## taxonomy
