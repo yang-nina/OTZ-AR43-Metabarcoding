@@ -455,7 +455,7 @@ dim(actinopterygii) ## 321 ASVs
 
 # steps to blast and assign
 # 1. convert unassigned csv to txt file (delete extraneous headers and columns, change extension). 
-# 2. I will run a script to extract sequences for the unknown feature IDs based against a reference fasta (prdb-metazoa-ctd-rep-seqs.fasta - created during decontam)
+# 2. I will run a script to extract sequences for the unknown feature IDs based against a reference fasta (12s-vert-ctd-rep-seqs.fasta - created during decontam)
 ## 2.1. unassigned actinopterygii code: nohup ./actinopterygii_unassigned_script.sh > actinopterygii_unassigned_script_log.txt 2>&1 &
 # 3. import for blastn in Geneious Prime
 # 4. Retrieve top hit. Keep the top hit that is at least 95% grade (explain grade in GP), is not uncultured or other unknown. Keep top hit based on grade
@@ -553,8 +553,6 @@ physeq_fish_rr <- phyloseq(
 )
 
 physeq_fish_rr # 727 ASVs
-#physeq_fish_rr_test <- prune_taxa(taxa_sums(physeq_fish_rr) >= 50, physeq_fish_rr)
-#physeq_fish_rr_test # 406
 
 ```
 
