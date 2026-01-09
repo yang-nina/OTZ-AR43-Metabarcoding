@@ -699,7 +699,6 @@ prot_specaccum_mat <- rare_prot %>%
 
 sac_prot <- specaccum(decostand(prot_specaccum_mat, method = "pa"),
                     method = "random", permutations = 999)
-
 prot_specaccum_df <- tibble(
   samples = sac_prot$sites,
   richness = sac_prot$richness,
@@ -735,7 +734,6 @@ run_sac_depth <- function(dat, perms = 999) {
   sac <- specaccum(decostand(prot_mat, method = "pa"),
                    method = "random",
                    permutations = perms)
-å
   tibble(
     depth    = unique(dat$depth),
     samples  = sac$sites,
