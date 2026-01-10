@@ -1960,7 +1960,7 @@ alpha_obs <- ggplot(obs_df, aes(y = fct_rev(as.factor(depth)), x = alpha_div)) +
   labs(title = "Richness",
        y = "Depth (m)",
        x = NULL) +
-  scale_fill_manual(values = group_colors, guide = "none") + theme_custom_paper() +  
+  scale_fill_manual(values = group_colors, name = NULL) + theme_custom_paper() +  
   theme(
     strip.background = element_blank(),
     strip.text = element_blank()
@@ -1975,7 +1975,7 @@ alpha_sha <- ggplot(sha_df, aes(y = fct_rev(as.factor(depth)), x = alpha_div)) +
   labs(title = "Shannon",
        y = "Depth (m)",
        x = NULL) +
-  scale_fill_manual(values = group_colors, guide = "none") + theme_custom_paper() +
+  scale_fill_manual(values = group_colors, name = NULL) + theme_custom_paper() +
     theme(
     strip.background = element_blank(),
     strip.text = element_blank()
@@ -1991,7 +1991,7 @@ alpha_even <- ggplot(even_df, aes(y = fct_rev(as.factor(depth)), x = alpha_div))
   labs(title = "Evenness",
        y = "Depth (m)",
        x = NULL) +
-  scale_fill_manual(values = group_colors, guide = "none") + theme_custom_paper() +
+  scale_fill_manual(values = group_colors, name = NULL) + theme_custom_paper() +
     theme(
     strip.background = element_blank(),
     strip.text = element_blank()
@@ -2000,7 +2000,8 @@ alpha_even <- ggplot(even_df, aes(y = fct_rev(as.factor(depth)), x = alpha_div))
    
 alpha_even
 
-alpha_obs / alpha_sha /alpha_even + plot_annotation(tag_levels = "A") & 
+alpha_obs / alpha_sha /alpha_even + plot_annotation(tag_levels = "A") + 
+  plot_layout(guides = 'collect') & 
   theme(plot.tag = element_text(size = 8),
         plot.margin = unit(c(t = 0.1, r = 0.05, b = 0.1, l = 0.05), "lines"),
         plot.title = element_text(size = 7),
@@ -2009,10 +2010,19 @@ alpha_obs / alpha_sha /alpha_even + plot_annotation(tag_levels = "A") &
         panel.border = element_rect(color = "black", linewidth = 0.5),
         axis.title.y = element_text(size = 6), 
         axis.text.x = element_text(size = 6), 
-        axis.text.y = element_text(size = 6))
+        axis.text.y = element_text(size = 6),
+        legend.text = element_text(size = 6, margin = margin(l = 2)),
+        legend.position = "bottom", 
+        legend.spacing.x = unit(7, "mm"), 
+        legend.margin = margin(t = -4, r = 0, b = 0, l = 0), 
+        legend.key.size = unit(3, 'mm'), 
+        legend.key.height = unit(2, "mm"),
+        legend.key.spacing.x = unit(1, "mm"),
+        legend.key.spacing.y = unit(0.25, "mm"))
 
-
+  
 ggsave("plots-final/alpha_div_indice_panel_pub_revision1.pdf", height = 130, width = 80, units = "mm", dpi=300)
+# a legend was added using Affinity Designer
 
 ```
 
@@ -2181,36 +2191,6 @@ prot_relabun_asv_plot +
 #ggsave("./plots-final/prot_obs_taxa_relabun.pdf", height = 5, width = 5, units = "in", dpi=300)
 
 head(prot_asv)
-
-# let's identify the taxa that make up the largest fraction of ASV diversity. This is termed "top taxa" in the code. 
-# This pipeline effectively identifies and ranks the top 5 taxa by relative abundance within each depth.
-# 
-# top_prot <- prot_asv %>% group_by(depth) %>% # group by depth
-#   mutate(sum_obs = sum(sobs)) %>% # get the total number of ASVs for each depth in a new column called "sum_obs"
-#   mutate(RelativeAbundance = (sobs / sum_obs) * 100, na.rm = TRUE) %>% # calculate the relative abundance of ASVs out of the total # of ASVs at each depth and create a new column. 
-#   mutate(depth = as.factor(depth)) %>% # change depth to a factor 
-#   ungroup() %>% # ungroup 
-#   group_by(depth, TAXA) %>% # regroup by depth and TAXA
-#   summarise(sum_RelativeAbundance = sum(RelativeAbundance, na.rm = TRUE), .groups = "drop") %>% # summarize to get the sum of the relative abundance of each taxa at each depth
-#   mutate(TAXA = fct_reorder(TAXA, sum_RelativeAbundance, .desc = FALSE)) %>% # Reorders the levels of the TAXA factor based on the sum_RelativeAbundance, maintaining the order of appearance if ties occur.
-#   ungroup() %>% # ungroup 
-#   group_by(depth) %>% # regroup by depth only 
-#   slice_max(order_by = sum_RelativeAbundance, n = 5, with_ties = FALSE) %>% # Selects the top 5 rows in each depth group based on sum_RelativeAbundance, excluding ties beyond the top 5.
-#   ungroup() # ungroup
-# 
-# top_prot %>% group_by(depth) %>% mutate(sum = sum(sum_RelativeAbundance)) %>% select(-TAXA, -sum_RelativeAbundance) %>% unique()
-# 
-# top_prot_pub <- top_prot %>% ggplot(aes(y = fct_rev(depth), x = sum_RelativeAbundance)) +
-#     geom_col(aes(fill = TAXA), color = "black", width = 0.78, linewidth = 0.25) +
-#     labs(title = NULL,
-#          y = "Depth (m)",
-#          x = "Relative Proportion (%)") +
-#   scale_x_continuous(limits = c(0, 100)) + 
-#     scale_fill_manual(values = taxa_colors,
-#                       limits = taxa_sorted) +
-#     theme_custom_paper()# Use a manually sorted order for the legend
-# 
-# top_prot_pub
 
 ```
 
@@ -2727,8 +2707,7 @@ fish_species_sum <- fish_taxa_order %>%
     .groups = "drop"
   )
 
-
-fish_species_count_wide <- fish_species_count %>%
+fish_species_count_wide <- fish_species_sum %>%
   pivot_wider(
     names_from  = deployment,
     values_from = n_unique_species,
@@ -2922,49 +2901,15 @@ fish_asv_plot <- fish_asv2 %>% select(depth, TAXA, sobs) %>%
 
 fish_asv_plot
 
-#ggsave("./plots-final/fish_obs_taxa_family_barplot_simplified.pdf", height = 5, width = 5, units = "in", dpi=300)
-# 
-# head(fish_asv2)
-# 
-# top_fish <- fish_asv2 %>% group_by(depth) %>%
-#   mutate(sum_obs = sum(sobs)) %>%
-#   mutate(RelativeAbundance = (sobs / sum_obs) * 100, na.rm = TRUE) %>%
-#   mutate(depth = as.factor(depth)) %>%
-#   ungroup() %>%
-#   group_by(depth, TAXA) %>%
-#   summarise(sum_RelativeAbundance = sum(RelativeAbundance, na.rm = TRUE), .groups = "drop") %>%
-# #  arrange(depth, desc(sum_RelativeAbundance)) %>%
-#   mutate(TAXA = fct_reorder(TAXA, sum_RelativeAbundance, .desc = FALSE)) %>%
-#   ungroup() %>%
-#   group_by(depth) %>%
-#   slice_max(order_by = sum_RelativeAbundance, n = 5, with_ties = FALSE) %>%
-#   ungroup()
-# 
-# top_fish
-# 
-# top_fish %>% group_by(depth) %>% mutate(sum = sum(sum_RelativeAbundance)) %>% select(-TAXA, -sum_RelativeAbundance) %>% unique()
-# 
-# top_fish_pub <- top_fish %>% ggplot(aes(y = fct_rev(depth), x = sum_RelativeAbundance)) +
-#     geom_col(aes(fill = TAXA), color = "black", width = 0.78, linewidth = 0.25) +
-#     labs(title = NULL,
-#          y = "Depth (m)",
-#          x = "Relative Proportion (%)") +
-#   scale_x_continuous(limits = c(0, 100)) + 
-#     scale_fill_manual(values = taxa_colors,
-#                       limits = taxa_sorted) +
-#     theme_custom_paper()# Use a manually sorted order for the legend
-# 
-# top_fish_pub
 
 ```
 
 ```{r save-load-asv-files, eval = TRUE, message = FALSE, warning = FALSE}
 
 # save files to avoid redoing work
-#save(prot_asv, met_asv, fish_asv, fish_asv2, file = "./asv_tables_alltaxa_for_plotting.RData")
+save(prot_asv, met_asv, fish_asv, fish_asv2, file = "./asv_tables_alltaxa_for_plotting.RData")
 
-#load(file = "./asv_tables_alltaxa_for_plotting.RData", verbose = T)
-
+load(file = "./asv_tables_alltaxa_for_plotting.RData", verbose = T)
 save(prot_taxa, met_taxa_order2, fish_taxa_order, file = "./psmelt_tables_for_networks.RData")
 
 ```
