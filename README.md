@@ -2,7 +2,7 @@
 
 This respository includes the data and code to recreate analyses and figures from the manuscript "Eukaryotic biodiversity and ecological networks from the surface to the mesopelagic in the Northwest Atlantic Slope Water". 
 
-The manuscript preprint is available on bioRxiv: doi: https://doi.org/10.1101/2025.05.12.653512.
+The manuscript is published in Molecular Ecology: https://onlinelibrary.wiley.com/doi/full/10.1111/mec.70411
 
 ## Abstract
 
